@@ -1,0 +1,22 @@
+{
+  "name": "teekback-uxui",
+  "version": "1.0.1",
+  "description": "UI library.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k5man/teekback-uxui.git"
+  },
+  "keywords": [
+    "ui"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k5man/teekback-uxui/issues"
+  },
+  "homepage": "https://github.com/k5man/teekback-uxui#readme"
+}
