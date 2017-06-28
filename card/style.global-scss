@@ -1,4 +1,4 @@
-@import "../css/use.global-scss";
+@import "../assets/css/use.global-scss";
 
 .card-panel {
 	transition: box-shadow .25s;
