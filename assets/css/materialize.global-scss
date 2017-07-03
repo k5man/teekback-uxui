@@ -2,9 +2,5 @@
 
 @import "use.global-scss";
 
-// Reset
-@import "_normalize.global-scss";
-
-@import "_global.global-scss";
 @import "_roboto.global-scss";
 @import "_typography.global-scss";
