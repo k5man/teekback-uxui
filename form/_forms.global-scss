@@ -1,0 +1,23 @@
+@import "../assets/css/use.global-scss";
+// Remove Focus Boxes
+select:focus {
+  outline: $select-focus;
+}
+
+button:focus {
+  outline: none;
+  background-color: $button-background-focus;
+}
+
+label {
+  font-size: $label-font-size;
+  color: $input-border-color;
+}
+
+@import '_input-fields.global-scss';
+@import '_radio-buttons.global-scss';
+@import '_checkboxes.global-scss';
+@import '_switches.global-scss';
+@import '_select.global-scss';
+@import '_file-input.global-scss';
+@import '_range.global-scss';
