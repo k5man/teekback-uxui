@@ -7,13 +7,17 @@ export default class Button extends BaseComponent {
 		return this.props.btnType;
 	}
 
+	createClassName(props) {
+		return `${this.getType()} 
+			${props.large ? 'btn-large' : ''} 
+			${!props.noWaves ? 'waves-effect waves-light ' : ''} 
+			${props.disabled ? 'disabled' : ''} 
+			${props.className}`;
+	}
+
 	render() {
 		const props = this.props;
-		props.className = `${this.getType()} 
-						${props.large ? 'btn-large' : ''} 
-						${!props.noWaves ? 'waves-effect waves-light ' : ''} 
-						${props.disabled ? 'disabled' : ''} 
-						${props.className}`;
+		props.className = this.createClassName(props);
 		return React.createElement(
 			props.element,
 			props,
