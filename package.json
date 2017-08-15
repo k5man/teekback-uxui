@@ -1,6 +1,6 @@
 {
   "name": "teekback-uxui",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "UI library.",
   "main": "index.js",
   "private": true,
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/k5man/teekback-uxui.git"
+    "url": "git+https://ч"
   },
   "keywords": [
     "ui"

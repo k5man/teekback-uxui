@@ -41,6 +41,8 @@ jspm_packages
 .idea
 config.json
 build
+*.iml
 
 # For git manipulations
 tmp
+
