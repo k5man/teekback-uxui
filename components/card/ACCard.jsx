@@ -1,7 +1,7 @@
 import ToggleDisplay from 'react-toggle-display';
 import { Card, CardContent, CardHeader } from '../../card';
 import Icon from '../../icons/icon';
-import BtnPair from './btnPair';
+import BtnPair from './BtnPair';
 
 /**
  * General wrapper card
