@@ -1,7 +1,0 @@
-@charset "UTF-8";
-
-@import "use.global-scss";
-
-@import "_roboto.global-scss";
-@import "_typography.global-scss";
-@import "helper.global-scss";

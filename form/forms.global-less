@@ -1,0 +1,23 @@
+@import "../assets/css/use.global.less";
+// Remove Focus Boxes
+select:focus {
+  outline: @select-focus;
+}
+
+button:focus {
+  outline: none;
+  background-color: @button-background-focus;
+}
+
+label {
+  font-size: @label-font-size;
+  color: @input-border-color;
+}
+
+@import '_input-fields.global.less';
+@import '_radio-buttons.global.less';
+@import '_checkboxes.global.less';
+@import '_switches.global.less';
+@import '_select.global.less';
+@import '_file-input.global.less';
+@import '_range.global.less';

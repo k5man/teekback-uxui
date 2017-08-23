@@ -1,4 +1,4 @@
-@import "../assets/css/use.global-scss";
+@import "../assets/css/use.global.less";
 /* Select Field
    ========================================================================== */
 
@@ -6,12 +6,12 @@ select { display: none; }
 select.browser-default { display: block; }
 
 select {
-  background-color: $select-background;
+  background-color: @select-background;
   width: 100%;
-  padding: $select-padding;
-  border: $select-border;
-  border-radius: $select-radius;
-  height: $input-height;
+  padding: @select-padding;
+  border: @select-border;
+  border-radius: @select-radius;
+  height: @input-height;
 }
 
 .select-label {
@@ -26,13 +26,13 @@ select {
     cursor: pointer;
     background-color: transparent;
     border: none;
-    border-bottom: $input-border;
+    border-bottom: @input-border;
     outline: none;
-    height: $input-height;
-    line-height: $input-height;
+    height: @input-height;
+    line-height: @input-height;
     width: 100%;
-    font-size: $input-font-size;
-    margin: $input-margin;
+    font-size: @input-font-size;
+    margin: @input-margin;
     padding: 0;
     display: block;
   }
@@ -49,14 +49,14 @@ select {
     line-height: 10px;
 
     &.disabled {
-      color: $input-disabled-color;
+      color: @input-disabled-color;
     }
   }
 
   & + label {
     position: absolute;
     top: -14px;
-    font-size: $label-font-size;
+    font-size: @label-font-size;
   }
 }
 
@@ -75,13 +75,13 @@ select:disabled {
 }
 
 .select-wrapper i {
-  color: $select-disabled-color;
+  color: @select-disabled-color;
 }
 
 .select-dropdown li.disabled,
 .select-dropdown li.disabled > span,
 .select-dropdown li.optgroup {
-  color: $select-disabled-color;
+  color: @select-disabled-color;
   background-color: transparent;
 }
 
@@ -97,8 +97,8 @@ select:disabled {
 // Icons
 .select-dropdown li {
   img {
-    height: $dropdown-item-height - 10;
-    width: $dropdown-item-height - 10;
+    height: @dropdown-item-height - 10;
+    width: @dropdown-item-height - 10;
     margin: 5px 15px;
     float: right;
   }
@@ -106,7 +106,7 @@ select:disabled {
 
 // Optgroup styles
 .select-dropdown li.optgroup {
-  border-top: 1px solid $dropdown-hover-bg-color;
+  border-top: 1px solid @dropdown-hover-bg-color;
 
   &.selected > span {
     color: rgba(0, 0, 0, .7);

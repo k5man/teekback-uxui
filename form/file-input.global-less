@@ -1,4 +1,4 @@
-@import "../assets/css/use.global-scss";
+@import "../assets/css/use.global.less";
 /* File Input
    ========================================================================== */
 
@@ -14,8 +14,8 @@
 
   .btn {
     float: left;
-    height: $input-height;
-    line-height: $input-height;
+    height: @input-height;
+    line-height: @input-height;
   }
 
   span {

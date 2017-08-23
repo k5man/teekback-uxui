@@ -7,7 +7,7 @@ const buildDir = path.resolve(root, './dist');
 
 const config = {
 	entry: {
-		main: path.resolve(root, 'assets', 'css', 'materialize.global-scss'),
+		main: path.resolve(root, 'assets', 'css', 'materialize.global-less'),
 	},
 	context: root,
 	output: {
@@ -15,14 +15,14 @@ const config = {
 		path: buildDir,
 	},
 	resolve: {
-		extensions: ['.scss'],
+		extensions: ['.global-less'],
 	},
 	target: 'web',
 	module: {
 		loaders: [
 			{
-				test: /\.sass|\.css|\.scss|\.global-scss$/,
-				use: ExtractTextPlugin.extract({ use: 'css-loader?minimize!sass-loader' }),
+				test: /\.global-less$/,
+				use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader?sourceMap/&minimize!less-loader?sourceMap' }),
 			},
 			{
 				test: /\.woff|\.woff2|\.eot|\.ttf$/,
