@@ -1,9 +1,16 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const LessPluginLists = require('less-plugin-lists');
 
 const root = __dirname;
 const buildDir = path.resolve(root, './dist');
+
+const extractLess = new ExtractTextPlugin({
+	filename: '[name].css',
+	disable: false,
+	allChunks: true,
+});
 
 const config = {
 	entry: {
@@ -19,10 +26,31 @@ const config = {
 	},
 	target: 'web',
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.less$/,
-				use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader?sourceMap/&minimize!less-loader?sourceMap' }),
+				use: extractLess.extract({
+					use: [
+						{
+							loader: 'css-loader',
+							options: {
+								sourceMap: true,
+								minimize: true,
+							},
+						},
+						{
+							loader: 'less-loader',
+							options: {
+								sourceMap: true,
+								plugins: [
+									new LessPluginLists(),
+								],
+							},
+						},
+
+					],
+					fallback: "style-loader",
+				}),
 			},
 			{
 				test: /\.woff|\.woff2|\.eot|\.ttf$/,
@@ -31,11 +59,7 @@ const config = {
 		],
 	},
 	plugins: [
-		new ExtractTextPlugin({
-			filename: '[name].css',
-			disable: false,
-			allChunks: true,
-		}),
+		extractLess,
 		new CleanWebpackPlugin(buildDir, {
 			root,
 			verbose: true,

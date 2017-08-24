@@ -30,18 +30,17 @@
 // Progress Bar
 
 
-
 // Colors
 // ==========================================================================
 
-@primary-color: extract(@materialize-red, lighten-2);
+@primary-color: at(@materialize-red, lighten-2);
 @primary-color-light: lighten(@primary-color, 15%);
 @primary-color-dark: darken(@primary-color, 15%);
 
-@secondary-color: color("teal", "lighten-1");
-@success-color: color("green", "base");
-@error-color: color("red", "base");
-@link-color: color("light-blue", "darken-1");
+@secondary-color: at(@teal, lighten-1);
+@success-color: at(@green, base);
+@error-color: at(@red, base);
+@link-color: at(@light-blue, darken-1);
 
 
 // Badges
@@ -95,7 +94,7 @@
 @card-padding: 8px;
 @card-padding-top: 8px;
 @card-bg-color: #fff;
-@card-link-color: color("orange", "accent-2");
+@card-link-color: at(@orange, accent-2);
 @card-link-color-light: lighten(@card-link-color, 20%);
 
 
@@ -153,7 +152,7 @@
 
 // Text Inputs + Textarea
 @input-height: 3rem;
-@input-border-color: color("grey", "base");
+@input-border-color: at(@grey, base);
 @input-border: 1px solid @input-border-color;
 @input-background: #fff;
 @input-error-color: @error-color;
