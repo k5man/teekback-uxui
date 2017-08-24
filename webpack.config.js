@@ -7,7 +7,7 @@ const buildDir = path.resolve(root, './dist');
 
 const config = {
 	entry: {
-		main: path.resolve(root, 'assets', 'css', 'materialize.global-less'),
+		main: path.resolve(root, 'assets', 'css', 'materialize.less'),
 	},
 	context: root,
 	output: {
@@ -15,13 +15,13 @@ const config = {
 		path: buildDir,
 	},
 	resolve: {
-		extensions: ['.global-less'],
+		extensions: ['.less'],
 	},
 	target: 'web',
 	module: {
 		loaders: [
 			{
-				test: /\.global-less$/,
+				test: /\.less$/,
 				use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader?sourceMap/&minimize!less-loader?sourceMap' }),
 			},
 			{
