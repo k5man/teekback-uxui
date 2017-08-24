@@ -4,7 +4,7 @@ import CardContent from './cardContent';
 import CardHeader from './cardHeader';
 import CardImages from './cardImage';
 
-import './style.global-scss';
+import './style.less';
 
 export default Card;
 export { Card, CardActions, CardContent, CardHeader, CardImages };
