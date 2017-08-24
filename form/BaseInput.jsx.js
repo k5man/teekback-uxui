@@ -1,5 +1,5 @@
 import BaseComponent from '../base/component';
-import './_forms.global-scss';
+import './forms.less';
 
 export default class BaseInput extends BaseComponent {
 

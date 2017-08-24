@@ -1,5 +1,5 @@
 import BaseComponent from '../base/component';
-import './style.global-scss';
+import './style.less';
 
 export default class Button extends BaseComponent {
 
