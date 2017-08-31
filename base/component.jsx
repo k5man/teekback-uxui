@@ -3,7 +3,7 @@ export default class BaseComponent extends React.Component {
 
 	getCustomProps() {
 		return Object.keys(this.props).reduce((result, propName) => {
-			const excludedNames = ['className', 'children'];
+			const excludedNames = ['className', 'children', 'element'];
 			if (excludedNames.indexOf(propName) < 0) {
 				result[propName] = this.props[propName];
 			}
