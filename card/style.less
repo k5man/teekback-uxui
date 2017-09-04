@@ -12,105 +12,75 @@
 .card {
 	position: relative;
 	margin: @element-top-margin 0 @element-bottom-margin 0;
+	color: @card-text-color;
 	background-color: @card-bg-color;
 	transition: box-shadow .25s;
 	border-radius: 2px;
-	@extend .z-depth-1;
-
-	.card-header {
-		padding: @card-padding;
-	}
-
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); //	@extend .z-depth-1;
+   max-width: @teek-width;
 
 	.card-title {
-		font-size: 24px;
-		font-weight: 300;
+		color: @card-header-title-color;
+		font-size: 1.64rem;
 		&.activator {
 			cursor: pointer;
 		}
 	}
 
-	// Card Sizes
-	&.small, &.medium, &.large {
-		position: relative;
+   p {
+     margin: 0;
+	  color: @card-header-subtitle-color;
+   }
 
-		.card-image {
-			max-height: 60%;
-			overflow: hidden;
-		}
-		.card-image + .card-content {
-			max-height: 40%;
-		}
-		.card-content {
-			max-height: 100%;
-			overflow: hidden;
-		}
-		.card-action {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
+	.card-header {
+		padding: @card-padding;
+	}
+	
+	.card-action-header {
+		padding: @card-padding;
+		.card-title {
+         font-size: 1rem;
 		}
 	}
 
-	&.small {
-		height: 300px;
-	}
-
-	&.medium {
-		height: 400px;
-	}
-
-	&.large {
-		height: 500px;
-	}
-
-	// Horizontal Cards
-	&.horizontal {
-		&.small, &.medium, &.large {
-			.card-image {
-				height: 100%;
-				max-height: none;
-				overflow: visible;
-
-				img {
-					height: 100%;
-				}
-			}
+	.card-icon-header {
+		padding: @card-padding;
+      line-height: @card-header-line-height;
+		padding-left: 72px;
+      position: relative;
+		.card-title {
+         font-size: 1rem;
 		}
-
-		display: flex;
-
-		.card-image {
-			max-width: 50%;
-			img {
-				border-radius: 2px 0 0 2px;
-				max-width: 100%;
-				width: auto;
-			}
-		}
-
-		.card-stacked {
-			display: flex;
-			flex-direction: column;
-			flex: 1;
-			position: relative;
-
-			.card-content {
-				flex-grow: 1;
-			}
+		.card-icon	{
+         position: absolute;
+         width: 42px;
+         height: 42px;
+         overflow: hidden;
+         left: 15px;
+         display: inline-block;
+         vertical-align: middle;			
+			border-radius: 50%;
+			background-color: #ccc;
 		}
 	}
 
-	// Sticky Action Section
-	&.sticky-action {
-		.card-action {
-			z-index: 2;
+	.card-branded-header {
+		padding: @card-padding;
+      line-height: @card-header-line-height;
+		padding-left: 72px;
+      position: relative;
+		.card-title {
+         font-size: 1rem;
 		}
-
-		.card-reveal {
-			z-index: 1;
-			padding-bottom: 64px;
+		.card-icon	{
+         position: absolute;
+         width: 42px;
+         height: 42px;
+         overflow: hidden;
+         left: 15px;
+         display: inline-block;
+         vertical-align: middle;			
+			background-color: #ccc;
 		}
 	}
 
@@ -142,6 +112,7 @@
 	.card-content {
 		padding: @card-padding;
 		border-radius: 0 0 2px 2px;
+	   min-height: 50px;
 
 		p {
 			margin: 0;
@@ -177,21 +148,4 @@
 		}
 	}
 
-	.card-reveal {
-		padding: @card-padding;
-		position: absolute;
-		background-color: @card-bg-color;
-		width: 100%;
-		overflow-y: auto;
-		left: 0;
-		top: 100%;
-		height: 100%;
-		z-index: 3;
-		display: none;
-
-		.card-title {
-			cursor: pointer;
-			display: block;
-		}
-	}
 }

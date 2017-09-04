@@ -1,6 +1,6 @@
 import BaseComponent from '../base/component';
 
-export default class HeadBar extends BaseComponent {
+export default class CardContent extends BaseComponent {
 
 	render() {
 		return (

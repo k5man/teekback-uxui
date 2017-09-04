@@ -1,11 +1,11 @@
 import BaseComponent from '../base/component';
 import './style.less';
 
-export default class CardHeader extends BaseComponent {
+export default class CardActionHeader extends BaseComponent {
 
 	render() {
 		return (
-			<div className={`card-header ${this.props.className}`}>
+			<div className={`card-action-header ${this.props.className}`}>
 				<span className="card-title">{`${this.props.title}`}</span>
 				<p>
 					{`${this.props.subtitle}`}
@@ -16,12 +16,12 @@ export default class CardHeader extends BaseComponent {
 
 }
 
-CardHeader.propTypes = {
+CardActionHeader.propTypes = {
 	title: PropTypes.string,
 	subtitle: PropTypes.string,
 };
 
-CardHeader.defaultProps = {
+CardActionHeader.defaultProps = {
 	title: 'Title',
 	subtitle: 'Subtitle',
 };

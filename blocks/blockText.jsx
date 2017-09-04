@@ -1,7 +1,7 @@
 import BaseComponent from '../base/component';
 import './style.less';
 
-export default class Card extends BaseComponent {
+export default class TextBase extends BaseComponent {
 
 	render() {
 		return (
