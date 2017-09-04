@@ -11,97 +11,166 @@ html {
 	}
 
 	@media only screen and (min-width: @medium-screen) {
-		font-size: 14.5px;
+		font-size:14px;
 	}
 
 	@media only screen and (min-width: @large-screen) {
-		font-size: 15px;
+		font-size:14px;
 	}
 
 	font-family: "Roboto", sans-serif;
+	font-size:14px;
 	font-weight: normal;
-	color: @off-black;
+	color: at(@teek-core-colors, font-base-87);
 }
 
-h1, h2, h3, h4, h5, h6 {
+// Typography styles
+
+.display3 {
+	font-size: 54px;
 	font-weight: 400;
 	line-height: 1.1;
-	color: @text-color-base;
+	color: at(@teek-core-colors, font-base-54);
+	margin: (54px / 2) 0 (54px / 2.5) 0;
 }
 
-// Header Styles
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-	font-weight: inherit;
+.display2 {
+	font-size:45px;
+	font-weight: 400;
+	line-height: 1.1;
+	color: at(@teek-core-colors, font-base-54);
+	margin: (45px / 2) 0 (45px / 2.5) 0;
 }
+
+.display1 {
+	font-size:34px;
+	font-weight: 400;
+	line-height: 1.1;
+	color: at(@teek-core-colors, font-base-54);
+	margin: (34px / 2) 0 (34px / 2.5) 0;
+}
+
+.headline {
+	font-size:24px;
+	font-weight: 400;
+	line-height: 1.1;
+	color: at(@teek-core-colors, font-base-87);
+	margin: 10px 0 7px 0;
+}
+
+.title {
+	font-size:20px;
+	font-weight: 500;
+	line-height: 1.1;
+	color: at(@teek-core-colors, font-base-87);
+	margin: (20px / 2) 0 (20px / 2.5) 0;
+}
+
+.subheading {
+	font-size:15px;
+	font-weight: 400;
+	line-height: 1.1;
+	color: at(@teek-core-colors, font-base-87);
+	margin: 0 0 4px 0;
+}
+
+.subheading-gray {
+	font-size:15px;
+	font-weight: 400;
+	line-height: 1.1;
+	color: at(@teek-core-colors, font-base-54);
+	margin: 0 0 4px 0;
+}
+
+.body-2 {
+	font-size:14px;
+	font-weight: 500;
+	line-height: 1.1;
+	color: at(@teek-core-colors, font-base-87);
+	margin: (14px / 2) 0 (14px / 2.5) 0;
+}
+
+.body-1 {
+	font-size:14px;
+	font-weight: 400;
+	line-height: 1.1;
+	color: at(@teek-core-colors, font-base-87);
+	margin: (14px / 2) 0 (14px / 2.5) 0;
+}
+
+.caption {
+	font-size:12px;
+	font-weight: 400;
+	line-height: 1.1;
+	color: at(@teek-core-colors, font-base-54);
+	margin: (12px / 2) 0 (12px / 2.5) 0;
+}
+
+.button {
+	font-size:14px;
+	font-weight: 400;
+	line-height: 1.1;
+	color: at(@teek-core-colors, font-base-87);
+	text-transform: uppercase;
+	margin: (14px / 2) 0 (14px / 2.5) 0;
+}
+
+// HTML tags with teeks Styles
 
 h1 {
-	font-size: @h1-fontsize;
-	line-height: 110%;
-	margin: (@h1-fontsize / 2) 0 (@h1-fontsize / 2.5) 0;
+	font-size: 54px;
+	font-weight: 400;
+	line-height: 1.1;
+	color: at(@teek-core-colors, font-base-54);
+	margin: (54px / 2) 0 (54px / 2.5) 0;
 }
 
 h2 {
-	font-size: @h2-fontsize;
-	line-height: 110%;
-	margin: (@h2-fontsize / 2) 0 (@h2-fontsize / 2.5) 0;
+	font-size:45px;
+	font-weight: 400;
+	line-height: 1.1;
+	color: at(@teek-core-colors, font-base-54);
+	margin: (45px / 2) 0 (45px / 2.5) 0;
 }
 
 h3 {
-	font-size: @h3-fontsize;
-	line-height: 110%;
-	margin: (@h3-fontsize / 2) 0 (@h3-fontsize / 2.5) 0;
+	font-size:34px;
+	font-weight: 400;
+	line-height: 1.1;
+	color: at(@teek-core-colors, font-base-54);
+	margin: (34px / 2) 0 (34px / 2.5) 0;
 }
 
 h4 {
-	font-size: @h4-fontsize;
-	line-height: 110%;
-	margin: (@h4-fontsize / 2) 0 (@h4-fontsize / 2.5) 0;
+	font-size:24px;
+	font-weight: 400;
+	line-height: 1.1;
+	color: at(@teek-core-colors, font-base-87);
+	margin: (24px / 2) 0 (24px / 2.5) 0;
 }
 
 h5 {
-	font-size: @h5-fontsize;
-	line-height: 110%;
-	margin: (@h5-fontsize / 2) 0 (@h5-fontsize / 2.5) 0;
+	font-size:20px;
+	font-weight: 500;
+	line-height: 1.1;
+	color: at(@teek-core-colors, font-base-87);
+	margin: (20px / 2) 0 (20px / 2.5) 0;
 }
 
 h6 {
-	font-size: @h6-fontsize;
-	line-height: 110%;
-	margin: (@h6-fontsize / 2) 0 (@h6-fontsize / 2.5) 0;
+	font-size:16px;
+	font-weight: 400;
+	line-height: 1.1;
+	color: at(@teek-core-colors, font-base-87);
+	margin: (16px / 2) 0 (16px / 2.5) 0;
 }
 
-// Text Styles
-em {
-	font-style: italic;
-}
-
-strong {
-	font-weight: 500;
-}
-
-small {
-	font-size: 75%;
-}
-
-.light {
+p {
+	font-size:14px;
 	font-weight: 300;
+	line-height: 1.1;
+	color: at(@teek-core-colors, font-base-87);
+	margin: (14px / 2) 0 (14px / 2.5) 0;
 }
 
-.thin {
-	font-weight: 200;
-}
 
-.flow-text {
-	font-weight: 300;
-	.iterateFlowText(@iterator:0) when(@iterator <= @intervals) {
-		@media only screen and (min-width: 360 + (@iterator * @interval-size)) {
-			font-size: 1.2rem * (1 + (.02 * @iterator));
-		}
-		.iterateFlowText((@iterator + 1));
-	}
-
-	// Handle below 360px screen
-	@media only screen and (max-width: 360px) {
-		font-size: 1.2rem;
-	}
-}

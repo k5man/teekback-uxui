@@ -6,8 +6,8 @@ export default class CardHeader extends BaseComponent {
 	render() {
 		return (
 			<div className={`card-header ${this.props.className}`}>
-				<span className="card-title">{`${this.props.title}`}</span>
-				<p>
+				<p className="headline">{`${this.props.title}`}</p>
+				<p className="subheading">
 					{`${this.props.subtitle}`}
 				</p>
 			</div>

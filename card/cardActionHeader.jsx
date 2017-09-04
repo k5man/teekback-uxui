@@ -6,8 +6,8 @@ export default class CardActionHeader extends BaseComponent {
 	render() {
 		return (
 			<div className={`card-action-header ${this.props.className}`}>
-				<span className="card-title">{`${this.props.title}`}</span>
-				<p>
+				<span className="subheading">{`${this.props.title}`}</span>
+				<p className="subheading-gray">
 					{`${this.props.subtitle}`}
 				</p>
 			</div>
