@@ -5,6 +5,9 @@ import { Card, CardHeader, CardActionHeader, CardIconHeader, CardBrandedHeader, 
 import { Button, RaisedButton, FlatButton, FloatingButton } from '../../buttons';
 import { BlockImage } from '../../blocks';
 
+import g1 from '../../assets/images/icon-logo.png';
+import g2 from '../../assets/images/g-1.jpg';
+
 class App extends React.Component {
 	render() {
 		return (
@@ -91,13 +94,16 @@ class App extends React.Component {
 						<Card>
 							<CardContent>
 							</CardContent>
-							<BlockImage>
+							<BlockImage src={g2}>
 							</BlockImage>
 							<CardContent>
 							</CardContent>
 						</Card>
 
 						<h5>Image on the top of the card</h5>
+
+				!!!<img src={g2} />!!!
+
 						<Card>
 							<BlockImage className={`block-image-top`}>
 							</BlockImage>

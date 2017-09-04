@@ -57,6 +57,51 @@ const config = {
 				use: 'url-loader?prefix=font/&limit=5000',
 			},
 		],
+		loaders: [
+			{
+				test: /\.(jpe?g|png|gif|svg)$/i,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							hash: 'sha512',
+							digest: 'hex',
+							name: '[hash].[ext]',
+						},
+					},
+					{
+						loader: 'image-webpack-loader',
+						options: {
+							bypassOnDebug: true,
+							mozjpeg: {
+								quality: 65,
+							},
+							pngquant:{
+								quality: "65-90",
+								speed: 4
+							},
+							svgo:{
+								plugins: [
+									{
+										removeViewBox: false
+									},
+									{
+										removeEmptyAttrs: false
+									}
+								]
+							},
+							gifsicle: {
+								interlaced: false,
+								optimizationLevel: 3,
+							},
+							optipng: {
+								optimizationLevel: 7,
+							},
+						},
+					},
+				]
+			},
+		],
 	},
 	plugins: [
 		extractLess,
