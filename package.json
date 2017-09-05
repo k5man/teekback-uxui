@@ -6,7 +6,9 @@
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "dev": "node ./documentation/build-script/index.js dev"
+	"dev": "node ./documentation/build-script/index.js dev",
+	"preview-build": "node ./documentation/build-script/index.js build",
+	"preview-analyze": "node ./documentation/build-script/index.js analyze"
   },
   "repository": {
     "type": "git",
