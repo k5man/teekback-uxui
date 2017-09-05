@@ -56,8 +56,6 @@ const config = {
 				test: /\.woff|\.woff2|\.eot|\.ttf$/,
 				use: 'url-loader?prefix=font/&limit=5000',
 			},
-		],
-		loaders: [
 			{
 				test: /\.(jpe?g|png|gif|svg)$/i,
 				use: [

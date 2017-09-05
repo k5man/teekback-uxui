@@ -12,85 +12,167 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="appWrapper" >
-					<div className="appBlock">
+				<div className="pageWrapper" >
+			
+					<div className="chapterHeader">
+						<h3 className="chapterTitle">Card</h3>
+					</div>
+			
+					<div className="articleBlock">
+						<div className="articleBlockLeft">
+							<h5>Closed View</h5>
+						</div>
+						<div className="articleBlockCenter">
 
-						<h3>Card</h3>
+							<Card>
+								<CardActionHeader>
+								</CardActionHeader>
+							</Card>
 
-						<h4>Closed View</h4>
-						<Card>
-							<CardActionHeader>
-							</CardActionHeader>
-						</Card>
+						</div>
 
-						<h4>Openned View</h4>
-						<Card>
-							<CardActionHeader>
-							</CardActionHeader>
-							<CardContent>
-								Some Content
-							</CardContent>
-							<CardActions>
-								<RaisedButton>RaisedButton</RaisedButton>
-								<FlatButton>FlatButton</FlatButton>
-							</CardActions>
-						</Card>
+						<div className="articleBlockRight">
+							Info
+						</div>
+					</div>
+			
+					<div className="articleBlock">
+						<div className="articleBlockLeft">
+							<h5>Openned View</h5>
+						</div>
+						<div className="articleBlockCenter">
 
-						<h4>Header</h4>
-						<Card>
-							<CardHeader>
-							</CardHeader>
-							<CardContent>
-							</CardContent>
-						</Card>
+							<Card>
+								<CardActionHeader>
+								</CardActionHeader>
+								<CardContent>
+									Some Content
+								</CardContent>
+								<CardActions>
+									<RaisedButton>RaisedButton</RaisedButton>
+									<FlatButton>FlatButton</FlatButton>
+								</CardActions>
+							</Card>
+
+						</div>
+						<div className="articleBlockRight">
+						</div>
+					</div>
+			
+					<div className="articleBlock">
+						<div className="articleBlockLeft">
+							<h5>Header</h5>
+						</div>
+						<div className="articleBlockCenter">
+
+							<Card>
+								<CardHeader>
+								</CardHeader>
+								<CardContent>
+								</CardContent>
+							</Card>
 						
-						<h4>Action Header</h4>
-						<Card>
-							<CardActionHeader>
-							</CardActionHeader>
-							<CardContent>
-							</CardContent>
-						</Card>
+						</div>
+						<div className="articleBlockRight">
+						</div>
+					</div>
+			
+					<div className="articleBlock">
+						<div className="articleBlockLeft">
+							<h5>Action Header</h5>
+						</div>
+						<div className="articleBlockCenter">
+
+							<Card>
+								<CardActionHeader>
+								</CardActionHeader>
+								<CardContent>
+								</CardContent>
+							</Card>
 						
-						<h4>Icon Header</h4>
-						<Card>
-							<CardIconHeader>
-							</CardIconHeader>
-							<CardContent>
-							</CardContent>
-						</Card>
+						</div>
+						<div className="articleBlockRight">
+						</div>
+					</div>
+			
+					<div className="articleBlock">
+						<div className="articleBlockLeft">
+							<h5>Icon Header</h5>
+						</div>
+						<div className="articleBlockCenter">
+
+							<Card>
+								<CardIconHeader>
+								</CardIconHeader>
+								<CardContent>
+								</CardContent>
+							</Card>
 						
-						<h4>Branded Header</h4>
+						</div>
+						<div className="articleBlockRight">
+						</div>
+					</div>
+			
+					<div className="articleBlock">
+						<div className="articleBlockLeft">
+							<h5>Branded Header</h5>
+						</div>
+						<div className="articleBlockCenter">
+
+							<Card>
+								<CardBrandedHeader>
+								</CardBrandedHeader>
+								<CardContent>
+								</CardContent>
+							</Card>
+
+						</div>
+						<div className="articleBlockRight">
+						</div>
+					</div>
+			
+					<div className="chapterHeader">
+						<h4 className="chapterTitle">Elemenents</h4>
+					</div>
+			
+					<div className="articleBlock">
+						<div className="articleBlockLeft">
+							<h5>Typography</h5>
+						</div>
+						<div className="articleBlockCenter">
+
 						<Card>
-							<CardBrandedHeader>
-							</CardBrandedHeader>
 							<CardContent>
+								<p className="display3">Display 3</p><br/>
+								<p className="display2">Display 2</p><br/>
+								<p className="display1">Display 1</p><br/>
+								<p className="headline">Headline</p><br/>
+								<p className="title">Title</p><br/>
+								<p className="subheading">Subheading</p><br/>
+								<p className="subheading-gray">Subheading Gray</p><br/>
+								<p className="body-2">Body 2</p><br/>
+								<p className="body-1">Body 1</p><br/>
+								<p className="caption">Caption</p><br/>
+								<p className="button">Button</p><br/>
 							</CardContent>
 						</Card>
-						
-						<br />
-						<hr />
 
-						<h3>Elemenents</h3>
+						</div>
+						<div className="articleBlockRight">
+							Type Styles
+						</div>
+					</div>
 
-						<h4>Typography</h4>
-						<Card>
-							<CardContent>
-								<h1>Header 1</h1>
-								<h2>Header 2</h2>
-								<h3>Header 3</h3>
-								<h4>Header 4</h4>
-								<h5>Header 5</h5>
-								<h6>Header 6</h6>
-								<p>
-									Text content. Plain text. Regular information.
-								</p>
-							</CardContent>
-						</Card>
+					<div className="chapterHeader">
+						<h5>Imagery</h5>
+					</div>
 
-						<h4>Imagery</h4>
+					<div className="articleBlock">
+						<div className="articleBlockLeft">
+							<h6>Image in the middle of the card</h6>
+						</div>
+						<div className="articleBlockCenter">
 
-						<h5>Image in the middle of the card</h5>
 						<Card>
 							<CardContent>
 							</CardContent>
@@ -100,9 +182,16 @@ class App extends React.Component {
 							</CardContent>
 						</Card>
 
-						<h5>Image on the top of the card</h5>
+						</div>
+						<div className="articleBlockRight">
+						</div>
+					</div>
 
-				!!!<img src={g2} />!!!
+					<div className="articleBlock">
+						<div className="articleBlockLeft">
+							<h6>Image on the top of the card</h6>
+						</div>
+						<div className="articleBlockCenter">
 
 						<Card>
 							<BlockImage className={`block-image-top`}>
@@ -110,31 +199,30 @@ class App extends React.Component {
 							<CardContent>
 							</CardContent>
 						</Card>
-			
-						<h5>Image at the bottom of the card</h5>
+
+						</div>
+						<div className="articleBlockRight">
+						</div>
+					</div>
+
+					<div className="articleBlock">
+						<div className="articleBlockLeft">
+							<h6>Image at the bottom of the card</h6>
+						</div>
+						<div className="articleBlockCenter">
+
 						<Card>
 							<CardContent>
 							</CardContent>
 							<BlockImage className={`block-image-bottom`}>
 							</BlockImage>
 						</Card>
-			
-						<br />
-						<hr />
 
-						<h3>Buttons</h3>
-						<Buttons /><br/><br/><br/>
-
-						<Card>
-							<CardContent>
-							</CardContent>
-							<CardActions>
-								<RaisedButton>RaisedButton</RaisedButton>
-								<FlatButton>FlatButton</FlatButton>
-							</CardActions>
-						</Card>
-
+						</div>
+						<div className="articleBlockRight">
+						</div>
 					</div>
+			
 				</div>
 			</div>
 		);

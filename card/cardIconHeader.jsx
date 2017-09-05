@@ -8,8 +8,8 @@ export default class CardIconHeader extends BaseComponent {
 		return (
 			<div className={`card-icon-header ${this.props.className}`}>
 				<img src={imgApplogo} className="card-icon " alt="" />
-				<span className="card-title">{`${this.props.title}`}</span>
-				<p>
+				<span className="subheading">{`${this.props.title}`}</span>
+				<p className="subheading-gray">
 					{`${this.props.subtitle}`}
 				</p>
 			</div>

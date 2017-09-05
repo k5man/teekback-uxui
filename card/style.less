@@ -12,25 +12,12 @@
 .card {
 	position: relative;
 	margin: @element-top-margin 0 @element-bottom-margin 0;
-	color: @card-text-color;
 	background-color: @card-bg-color;
 	transition: box-shadow .25s;
 	border-radius: 2px;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); //	@extend .z-depth-1;
+   width: @teek-width;
    max-width: @teek-width;
-
-	.card-title {
-		color: @card-header-title-color;
-		font-size: 1.64rem;
-		&.activator {
-			cursor: pointer;
-		}
-	}
-
-   p {
-     margin: 0;
-	  color: @card-header-subtitle-color;
-   }
 
 	.card-header {
 		padding: @card-padding;
@@ -38,19 +25,12 @@
 	
 	.card-action-header {
 		padding: @card-padding;
-		.card-title {
-         font-size: 1rem;
-		}
 	}
 
 	.card-icon-header {
 		padding: @card-padding;
-      line-height: @card-header-line-height;
 		padding-left: 72px;
       position: relative;
-		.card-title {
-         font-size: 1rem;
-		}
 		.card-icon	{
          position: absolute;
          width: 42px;
@@ -66,12 +46,8 @@
 
 	.card-branded-header {
 		padding: @card-padding;
-      line-height: @card-header-line-height;
 		padding-left: 72px;
       position: relative;
-		.card-title {
-         font-size: 1rem;
-		}
 		.card-icon	{
          position: absolute;
          width: 42px;
@@ -116,7 +92,6 @@
 
 		p {
 			margin: 0;
-			color: inherit;
 		}
 		.card-title {
 			display: block;
