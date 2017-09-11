@@ -1,6 +1,6 @@
 {
   "name": "teekback-uxui",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "UI library.",
   "main": "index.js",
   "private": true,
