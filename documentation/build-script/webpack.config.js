@@ -83,7 +83,7 @@ const config = {
 			},
 			{
 				test: /\.(jpe?g|png|gif|svg)$/i,
-				use: [
+				loaders: [
 					{
 						loader: 'file-loader',
 						options: {
@@ -95,6 +95,7 @@ const config = {
 					{
 						loader: 'image-webpack-loader',
 						options: {
+							webp: { enabled: false },
 							bypassOnDebug: true,
 							mozjpeg: {
 								quality: 65,

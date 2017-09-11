@@ -1,12 +1,17 @@
 import '../../assets/css/materialize.less';
 import './style.less';
 import Buttons from '../../buttons/test/preview.jsx';
-import { Card, CardHeader, CardActionHeader, CardIconHeader, CardBrandedHeader, CardContent, CardActions } from '../../card';
+import { Card, CardHeader, CardActionHeader, CardIconHeader, CardBrandedHeader, CardContent, CardActions, CardImageHeader } from '../../card';
 import { Button, RaisedButton, FlatButton, FloatingButton } from '../../buttons';
-import { BlockImage } from '../../blocks';
+import { BlockImage, BlockGoodsItemSelectQuantity } from '../../blocks';
 
-import g1 from '../../assets/images/icon-logo.png';
-import g2 from '../../assets/images/g-1.jpg';
+import g1 from '../../assets/images/g-1.jpg';
+
+// Product Demo
+import productImage from '../../assets/images/g-2.jpg';
+const productTitle = 'Product Title';
+const productSubTitle = 'Product Subtitle';
+const productPrice = '$50.00';
 
 class App extends React.Component {
 	render() {
@@ -17,7 +22,7 @@ class App extends React.Component {
 					<div className="chapterHeader">
 						<h3 className="chapterTitle">Card</h3>
 					</div>
-			
+					
 					<div className="articleBlock">
 						<div className="articleBlockLeft">
 							<h5>Closed View</h5>
@@ -130,6 +135,24 @@ class App extends React.Component {
 						<div className="articleBlockRight">
 						</div>
 					</div>
+
+					<div className="articleBlock">
+						<div className="articleBlockLeft">
+							<h5>Image Header</h5>
+						</div>
+						<div className="articleBlockCenter">
+
+							<Card>
+								<CardImageHeader src={g1} title='AAA'>
+								</CardImageHeader>
+								<CardContent>
+								</CardContent>
+							</Card>
+
+						</div>
+						<div className="articleBlockRight">
+						</div>
+					</div>
 			
 					<div className="chapterHeader">
 						<h4 className="chapterTitle">Elemenents</h4>
@@ -176,7 +199,7 @@ class App extends React.Component {
 						<Card>
 							<CardContent>
 							</CardContent>
-							<BlockImage src={g2}>
+							<BlockImage src={g1}>
 							</BlockImage>
 							<CardContent>
 							</CardContent>
@@ -194,7 +217,7 @@ class App extends React.Component {
 						<div className="articleBlockCenter">
 
 						<Card>
-							<BlockImage className={`block-image-top`}>
+							<BlockImage  src={g1} className={`block-image-top`}>
 							</BlockImage>
 							<CardContent>
 							</CardContent>
@@ -214,8 +237,34 @@ class App extends React.Component {
 						<Card>
 							<CardContent>
 							</CardContent>
-							<BlockImage className={`block-image-bottom`}>
+							<BlockImage  src={g1} className={`block-image-bottom`}>
 							</BlockImage>
+						</Card>
+
+						</div>
+						<div className="articleBlockRight">
+						</div>
+					</div>
+
+					<div className="chapterHeader">
+						<h4 className="chapterTitle">Blocks</h4>
+					</div>
+			
+					<div className="articleBlock">
+						<div className="articleBlockLeft">
+							<h6>Good Items with Quantity Selector</h6>
+						</div>
+						<div className="articleBlockCenter">
+
+						<Card>
+							<BlockGoodsItemSelectQuantity 
+								productimage={productImage}
+								producttitle={productTitle}
+								productsubtitle={productSubTitle}
+								productprice={productPrice}
+								className={`block-image-bottom`}
+								>
+							</BlockGoodsItemSelectQuantity>
 						</Card>
 
 						</div>

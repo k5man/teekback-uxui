@@ -26,6 +26,7 @@ CardImage.defaultProps = Object.assign(
 	{},
 	BaseComponent.defaultProps,
 	{
-		title: '',
+		src: '',
+		title: 'Title',
 	}
 );

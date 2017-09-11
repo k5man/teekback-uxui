@@ -1,54 +1,29 @@
 @import "../assets/css/use";
 
-// Image in the middle of the card
-.block-image {
-	position: relative;
-	max-width: @teek-width;
-
-	img {
-		display: block;
-		position: relative;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		width: 100%;
-	}
-}
-
-// Image on the top of the card
-.block-image-top {
-	position: relative;
-	max-width: @teek-width;
-	border-radius: 2px 2px 0 0;
-
-	img {
-		display: block;
-		position: relative;
-		border-radius: 2px 2px 0 0;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		width: 100%;
-	}
-}
-
-// Image at the bottom of the card
-.block-image-bottom
-img {
-	position: relative;
-	max-width: @teek-width;
+.block-base {
+	padding: @card-padding;
 	border-radius: 0 0 2px 2px;
+   min-height: 50px;
+}
 
-	img {
-		display: block;
-		position: relative;
-		border-radius: 0 0 2px 2px;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		width: 100%;
+.block-goods {
+	position: relative;
+	
+	.product-with-qs {
+		padding: @card-padding;
+		padding-left: 150px + @card-padding * 2;
+      position: relative;
+      min-height: 100px + @card-padding * 2;
+		.product-image	{
+         position: absolute;
+         width: 150px;
+         max-height: 100px;
+         overflow: hidden;
+         left: @card-padding;
+         display: inline-block;
+         vertical-align: middle;			
+			background-color: #ccc;
+		}
 	}
+	
 }

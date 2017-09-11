@@ -13,7 +13,7 @@ export default class InputField extends BaseInput {
 					{...this.getCustomProps()}
 					className="validate"
 				/>
-				{this.props.label ? <label for={this.props.id}>{this.props.label}</label> : null}
+				{this.props.label ? <label for={this.props.id} className="active" >{this.props.label}</label> : null}
 			</div>
 		);
 	}
