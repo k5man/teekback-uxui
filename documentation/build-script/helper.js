@@ -119,13 +119,11 @@ function prepareWebpackConfig(webpackConfig, params) {
 	// }));
 
 	plugins.push(new webpack.ProvidePlugin({
+		Teek: path.resolve(root, 'utils/teekGlobal.js'),
 		React: 'react',
 		ReactDom: 'react-dom',
 		PropTypes: 'prop-types',
-		$: 'jquery',
-		jQuery: 'jquery',
-		'window.$': 'jquery',
-		'window.jQuery': 'jquery',
+		logger: path.resolve(root, 'classes/logger.js'),
 	}));
 
 	plugins.push(new StyleLintPlugin({

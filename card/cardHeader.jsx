@@ -5,8 +5,11 @@ export default class CardHeader extends BaseComponent {
 
 	render() {
 		return (
-			<div className={`card-header ${this.getClassName()}`}>
-				{this.props.children}
+			<div className={`card-header ${this.props.className}`}>
+				<p className="headline">{`${this.props.title}`}</p>
+				<p className="subheading">
+					{`${this.props.subtitle}`}
+				</p>
 			</div>
 		);
 	}
@@ -14,10 +17,11 @@ export default class CardHeader extends BaseComponent {
 }
 
 CardHeader.propTypes = {
-	className: PropTypes.string,
+	title: PropTypes.string,
+	subtitle: PropTypes.string,
 };
 
 CardHeader.defaultProps = {
-	className: '',
+	title: 'Title',
+	subtitle: 'Subtitle',
 };
-

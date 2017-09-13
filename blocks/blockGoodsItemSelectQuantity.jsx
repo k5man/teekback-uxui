@@ -17,10 +17,10 @@ export default class BlockGoodsItemSelectQuantity extends BaseComponent {
 						{`${this.props.productprice}`}
 					</p>
 				</div>
-				<div className="divider" />
+				<div className="divider"></div>
 				<div className={`block-base `}>
-					<InputField label="Label" placeholder="Placeholder" />
-					<SelectField label="Label" placeholder="Placeholder" />
+					<InputField label="Label" placeholder="Placeholder"></InputField>
+					<SelectField label="Label" placeholder="Placeholder"></SelectField>
 				</div>
 			</div>
 		);

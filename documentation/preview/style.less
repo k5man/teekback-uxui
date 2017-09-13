@@ -1,54 +1,39 @@
-@import "./lib";
-
-.previewContainer {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: stretch;
-	flex-wrap: nowrap;
-	padding-left: 340px;
-
+.pageWrapper {
+	margin: 0 auto;
+	width: 100%;
 }
 
-	.previewNavigation {
-		flex-basis: 300px;
-		width: 300px;
-		-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-		box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-	}
+.chapterHeader {
+	display: block;
+	margin: 0;
+	padding: 24px 50px;
+}
 
-	.previewContent {
-		flex-grow: 1;
-		display: flex;
-	}
+.chapterTitle {
+	color: #00897b;
+}
 
-	.previewBlocks {
-		padding-left: 20px;
-		padding-right: 40px;
-	}
+.articleBlock {
+	display: block;
+}
 
-	.previewBlock {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: stretch;
-		flex-wrap: nowrap;
-		padding: 40px 0 20px 0;
-		border-bottom: 1px solid #eee;
-	}
+.articleBlockLeft {
+	display: inline-block;
+	padding: 24px 50px;
+	width: 350px;
+	vertical-align: top;
+}
 
-	.previewExample {
-		width: 382px;
-		padding: 5px;
-		margin: 0 40px 0 0;
-	}
+.articleBlockCenter {
+	display: inline-block;
+	width:500px;
+	padding: 24px 50px;
+	vertical-align: top;
+}
 
-	.previewCode {
-		flex-grow: 1;
-	}
-
-	.previewBlocksWrap {
-		width: 100%;
-		display: block;
-	}
-
+.articleBlockRight {
+	display: inline-block;
+	width:350px;
+	padding: 24px 50px;
+	vertical-align: top;
+}
