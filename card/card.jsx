@@ -5,7 +5,7 @@ export default class Card extends BaseComponent {
 
 	render() {
 		return (
-			<div className={`card ${this.props.className}`} {...this.getCustomProps()}>
+			<div className={`card ${this.getClassName()}`} {...this.getCustomProps()}>
 				{this.props.children}
 			</div>
 		);
@@ -14,7 +14,10 @@ export default class Card extends BaseComponent {
 }
 
 Card.propTypes = {
+	className: PropTypes.string,
 };
 
 Card.defaultProps = {
+	className: '',
 };
+

@@ -1,6 +1,11 @@
 /*eslint-disable */
 export default class BaseComponent extends React.Component {
 
+	getClassName(prop) {
+		prop = prop || 'className';
+		return this.props[prop] || '';
+	}
+
 	getCustomProps() {
 		return Object.keys(this.props).reduce((result, propName) => {
 			const excludedNames = ['className', 'children', 'element'];

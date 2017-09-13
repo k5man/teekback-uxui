@@ -6,9 +6,9 @@
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.config.js",
-	"dev": "node ./documentation/build-script/index.js dev",
-	"preview-build": "node ./documentation/build-script/index.js build",
-	"preview-analyze": "node ./documentation/build-script/index.js analyze"
+    "dev": "node ./documentation/build-script/index.js dev",
+    "preview-build": "node ./documentation/build-script/index.js build",
+    "preview-analyze": "node ./documentation/build-script/index.js analyze"
   },
   "repository": {
     "type": "git",
@@ -68,6 +68,10 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "lesshat": "^4.1.0"
+    "hammerjs": "^2.0.8",
+    "jquery": "^3.2.1",
+    "lesshat": "^4.1.0",
+    "materialize": "^1.0.0",
+    "materialize-css": "^0.100.2"
   }
 }
