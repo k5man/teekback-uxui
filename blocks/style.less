@@ -8,6 +8,23 @@
 
 .block-goods {
 	position: relative;
+
+	.product-1 {
+		padding: @card-padding;
+		padding-left: 100px + @card-padding * 2;
+      position: relative;
+      min-height: 100px + @card-padding * 2;
+		.product-image	{
+         position: absolute;
+         width: 100px;
+         max-height: 100px;
+         overflow: hidden;
+         left: @card-padding;
+         display: inline-block;
+         vertical-align: middle;			
+			background-color: #ccc;
+		}
+	}
 	
 	.product-with-qs {
 		padding: @card-padding;
