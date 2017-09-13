@@ -2,7 +2,7 @@ import './style.less';
 import Buttons from '../../buttons/test/preview.jsx';
 import { Card, CardHeader, CardActionHeader, CardIconHeader, CardBrandedHeader, CardContent, CardActions, CardImageHeader } from '../../card';
 import { Button, RaisedButton, FlatButton, FloatingButton } from '../../buttons';
-import { BlockImage, BlockGoodsItemSelectQuantity } from '../../blocks';
+import { BlockImage, BlockGoodsItem, BlockGoodsItemSelectQuantity } from '../../blocks';
 
 import g1 from '../../assets/images/g-1.jpg';
 
@@ -251,7 +251,27 @@ class App extends React.Component {
 			
 					<div className="articleBlock">
 						<div className="articleBlockLeft">
-							<h6>Good Items with Quantity Selector</h6>
+							<h6>Product</h6>
+						</div>
+						<div className="articleBlockCenter">
+
+						<Card>
+							<BlockGoodsItem 
+								productimage={productImage}
+								producttitle={productTitle}
+								productsubtitle={productSubTitle}
+								>
+							</BlockGoodsItem>
+						</Card>
+
+						</div>
+						<div className="articleBlockRight">
+						</div>
+					</div>
+
+					<div className="articleBlock">
+						<div className="articleBlockLeft">
+							<h6>Product with Quantity Selector</h6>
 						</div>
 						<div className="articleBlockCenter">
 
