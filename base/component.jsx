@@ -1,3 +1,5 @@
+import '../assets/css/teekback.less';
+
 /*eslint-disable */
 export default class BaseComponent extends React.Component {
 

@@ -1,4 +1,3 @@
-import '../../assets/css/materialize.less';
 import './style.less';
 import Buttons from '../../buttons/test/preview.jsx';
 import { Card, CardHeader, CardActionHeader, CardIconHeader, CardBrandedHeader, CardContent, CardActions, CardImageHeader } from '../../card';
@@ -217,7 +216,7 @@ class App extends React.Component {
 						<div className="articleBlockCenter">
 
 						<Card>
-							<BlockImage  src={g1} className={`block-image-top`}>
+							<BlockImage  src={g1} className={`element-top`}>
 							</BlockImage>
 							<CardContent>
 							</CardContent>
@@ -237,7 +236,7 @@ class App extends React.Component {
 						<Card>
 							<CardContent>
 							</CardContent>
-							<BlockImage  src={g1} className={`block-image-bottom`}>
+							<BlockImage  src={g1} className={`element-bottom`}>
 							</BlockImage>
 						</Card>
 

@@ -6,7 +6,7 @@ export default class BlockImage extends BaseComponent {
 	render() {
 		return (
 			<div className={`block-image ${this.props.className}`}>
-				<img src={this.props.src} alt={this.props.description} />
+				<img src={this.props.src} alt={this.props.description} className={`${this.props.className}`} />
 			</div>
 		);
 	}

@@ -7,7 +7,7 @@ export default class CardBrandedHeader extends BaseComponent {
 	render() {
 		return (
 			<div className={`card-branded-header ${this.props.className}`}>
-				<img src={imgApplogo} className="card-icon " alt="" />
+				<img src={this.props.icon} className="card-icon " alt="" />
 				<span className="subheading">{`${this.props.title}`}</span>
 				<p className="subheading-gray">
 					{`${this.props.subtitle}`}
@@ -25,7 +25,7 @@ CardBrandedHeader.propTypes = {
 };
 
 CardBrandedHeader.defaultProps = {
-	icon: './icon-logo.png',
+	icon: imgApplogo,
 	title: 'Title',
 	subtitle: 'Subtitle',
 };

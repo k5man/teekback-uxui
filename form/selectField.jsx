@@ -19,21 +19,18 @@ export default class SelectField extends BaseInput {
 		this.props.type = this.props.type ? this.props.type : 'text';
 		return (
 			<div class="input-field">
-				<div className="select-wrapper ">
-					<ul>
-						<li className="select-lined " onChange={this.handleChange}>1</li>
-						<li className="select-dropdown ">2</li>
-						<li className="select-dropdown ">3</li>
-						<li className="select-dropdown ">4</li>
-						<li className="select-dropdown ">5</li>
-					</ul>
-			
-					<option value="" disabled selected>Choose your option</option>
-					<option value="1">Option 1</option>
-					<option value="2">Option 2</option>
-					<option value="3">Option 3</option>
+				<label className="active">Quantity</label>
+				<div className="select-field ">
+					<span class="caret">▼</span>
+			      <input type="text" class="select-dropdown" readonly="true" data-activates="select-options-111" value="1"/>
 				</div>
-				<label for="first_name" className="active">First Name</label>
+				<div className="select-dropdown ">
+					<ul id="select-options-111" >
+						<li class=""><span>1</span></li>
+						<li class=""><span>2</span></li>
+						<li class="active"><span>3</span></li>
+					</ul>
+				</div>
 			</div>
 		);
 	}

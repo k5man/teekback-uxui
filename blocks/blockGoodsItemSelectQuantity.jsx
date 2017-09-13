@@ -1,7 +1,6 @@
 import BaseComponent from '../base/component';
 import { SelectField, InputField } from '../form';
 import './style.less';
-import '../assets/css/materialize.less';
 
 export default class BlockGoodsItemSelectQuantity extends BaseComponent {
 
