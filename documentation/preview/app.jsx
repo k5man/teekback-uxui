@@ -6,6 +6,7 @@ import Forms from '../../form/test/preview';
 import Icons from '../../icons/test/preview';
 import HeaderBlocks from '../../blocks/headers/test/preview';
 import ProductBlocks from '../../blocks/products/test/preview';
+import ImageBlocks from '../../blocks/images/test/preview';
 
 const previews = [
 	Buttons,
@@ -14,6 +15,7 @@ const previews = [
 	Cards,
 	HeaderBlocks,
 	ProductBlocks,
+	ImageBlocks,
 ];
 
 class App extends React.Component {

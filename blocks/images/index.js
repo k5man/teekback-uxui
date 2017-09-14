@@ -1,5 +1,4 @@
 import BlockImage from './blockImage';
 
-import './style.less';
-
+export default BlockImage;
 export { BlockImage };
