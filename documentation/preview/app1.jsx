@@ -1,6 +1,6 @@
 import '../../assets/css/materialize.less';
 import './style.less';
-import Buttons from '../../buttons/test/preview.js';
+import Buttons from '../../buttons/test/preview.jsx';
 import { Card, CardHeader, CardActionHeader, CardIconHeader, CardBrandedHeader, CardContent, CardActions, CardImageHeader } from '../../card';
 import { Button, RaisedButton, FlatButton, FloatingButton } from '../../buttons';
 import { BlockImage, BlockGoodsItemSelectQuantity } from '../../blocks';

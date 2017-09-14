@@ -10,8 +10,21 @@ export default class Icon extends BaseComponent {
 		return (
 			<i
 				className={`material-icons ${this.props.className}`}
-				{...this.getCustomProps()}>{this.getName()}</i>
+				{...this.getCustomProps()}
+			>
+				{this.getName()}
+			</i>
 		);
 	}
 
 }
+
+Icon.propTypes = {
+	className: PropTypes.string,
+	name: PropTypes.string,
+};
+
+Icon.defaultProps = {
+	className: '',
+};
+

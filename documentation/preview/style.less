@@ -20,11 +20,14 @@
 	.previewContent {
 		flex-grow: 1;
 		display: flex;
+		flex-direction: column;
+		overflow: hidden;
 	}
 
 	.previewBlocks {
 		padding-left: 20px;
 		padding-right: 40px;
+		padding-top: 20px;
 	}
 
 	.previewBlock {
@@ -33,7 +36,7 @@
 		justify-content: space-between;
 		align-items: stretch;
 		flex-wrap: nowrap;
-		padding: 40px 0 20px 0;
+		padding: 20px 0 20px 0;
 		border-bottom: 1px solid #eee;
 	}
 
@@ -45,6 +48,7 @@
 
 	.previewCode {
 		flex-grow: 1;
+		overflow: hidden;
 	}
 
 	.previewBlocksWrap {
@@ -52,3 +56,7 @@
 		display: block;
 	}
 
+pre[class*=language-] {
+	overflow: auto;
+	width: 100%;
+}

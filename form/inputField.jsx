@@ -1,4 +1,4 @@
-import BaseInput from './BaseInput.jsx';
+import BaseInput from './baseInput';
 
 export default class InputField extends BaseInput {
 
@@ -13,7 +13,7 @@ export default class InputField extends BaseInput {
 					{...this.getCustomProps()}
 					className="validate"
 				/>
-				{this.props.label ? <label for={this.props.id} className="active" >{this.props.label}</label> : null}
+				{this.props.label ? <label htmlFor={this.props.id} className="active" >{this.props.label}</label> : null}
 			</div>
 		);
 	}

@@ -1,23 +1,24 @@
 import '../../assets/css/materialize.less';
 import './style.less';
-import Buttons from '../../buttons/test/preview.js';
+import Buttons from '../../buttons/test/preview';
+import Cards from '../../card/test/preview';
+import TitlesBlocks from '../../blocks/titles-block/test/preview';
+import Forms from '../../form/test/preview';
+import Icons from '../../icons/test/preview';
 
 const previews = [
 	Buttons,
+	Forms,
+	Icons,
+	Cards,
+	TitlesBlocks,
 ];
 
 class App extends React.Component {
 
-	componentDidMount() {
-		$(document).ready(function(){
-			$('.collapsible').collapsible();
-			$('.scrollspy').scrollSpy();
-		});
-	}
-
 	static submenu(blocks) {
 		return (
-			<div className="collapsible-body">
+			<div className="inner">
 				<ul>
 					{blocks.map(item => {
 						return (
@@ -47,6 +48,13 @@ class App extends React.Component {
 		);
 	}
 
+	componentDidMount() {
+		$(document).ready(() => {
+			// $('.collapsible').collapsible();
+			$('.scrollspy').scrollSpy();
+		});
+	}
+
 	render() {
 		return (
 			<div className="previewContainer">
@@ -56,10 +64,12 @@ class App extends React.Component {
 							{previews.map(item => {
 								return (
 									<li className="bold">
-										<a href={`#${item.title}`} className="collapsible-header waves-effect waves-teal">{item.title}</a>
+										<a href={`#${item.title}`} className="collapsible-header waves-effect waves-teal">
+											{item.title}
+										</a>
 										{item.blocks && App.submenu(item.blocks)}
 									</li>
-								)
+								);
 							})}
 						</ul>
 					</li>
@@ -71,12 +81,13 @@ class App extends React.Component {
 								<h2>{item.title}</h2>
 								{item.blocks && item.blocks.map(App.drawBlock)}
 							</div>
-						)
+						);
 					})}
 				</main>
 			</div>
 		);
 	}
+
 }
 
 export default App;
