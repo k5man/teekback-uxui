@@ -2,16 +2,18 @@ import '../../assets/css/materialize.less';
 import './style.less';
 import Buttons from '../../buttons/test/preview';
 import Cards from '../../card/test/preview';
-import TitlesBlocks from '../../blocks/titles-block/test/preview';
 import Forms from '../../form/test/preview';
 import Icons from '../../icons/test/preview';
+import HeaderBlocks from '../../blocks/headers/test/preview';
+import ProductBlocks from '../../blocks/products/test/preview';
 
 const previews = [
 	Buttons,
 	Forms,
 	Icons,
 	Cards,
-	TitlesBlocks,
+	HeaderBlocks,
+	ProductBlocks,
 ];
 
 class App extends React.Component {

@@ -46,3 +46,4 @@ build
 # For git manipulations
 tmp
 dist
+*.DS_Store

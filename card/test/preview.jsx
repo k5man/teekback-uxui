@@ -17,8 +17,8 @@ export default {
 		<h3>Header h3</h3>
 		<h4>Header h4</h4>
 		<p>
-			New text paragraph!
-			a distinct section of a piece of writing, usually dealing with a single theme and indicated by
+			I'll be in your neighborhood doing errands 
+			this weekend if you want to meet up for bunch. Let me know.
 		</p>
 	</CardContent>
 	<CardActions>
@@ -36,9 +36,13 @@ export default {
 						<h2>Header h2</h2>
 						<h3>Header h3</h3>
 						<h4>Header h4</h4>
+						<h5>Header h5</h5>
+						<h6>Header h6</h6>
 						<p>
-							New text paragraph!
-							a distinct section of a piece of writing, usually dealing with a single theme and indicated by
+							I'll be in your neighborhood doing errands this weekend if you want to meet up for bunch. Let me know.
+						</p>
+						<p>
+							And little bit more...
 						</p>
 					</CardContent>
 					<CardActions>
