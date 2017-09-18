@@ -87,6 +87,7 @@ class App extends React.Component {
 				</ul>
 				<main className="previewContent">
 					<div className="previewBlocksWrap" id="colorsBlock">
+						<h2>Colors</h2>
 						<div class="row dynamic-color">
 							<div class="col s12 m6 l4">
 								<div class="red lighten-5">#ffebee red lighten-5</div>
