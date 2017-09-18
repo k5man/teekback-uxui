@@ -39,7 +39,7 @@ export default {
 						<h5>Header h5</h5>
 						<h6>Header h6</h6>
 						<p>
-							I'll be in your neighborhood doing errands this weekend if you want to meet up for bunch. Let me know.
+							Ill be in your neighborhood doing errands this weekend if you want to meet up for bunch. Let me know.
 						</p>
 						<p>
 							And little bit more...

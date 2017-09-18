@@ -17,7 +17,7 @@ export default {
 		<blockquote>
 			This is an example quotation that uses the blockquote tag.
 		</blockquote>
-		<p class="flow-text">I am Flow Text. To see Flow Text in action, slowly resize your browser and watch the size of this text body change! Use the button above to toggle off/on flow-text to see the difference!</p>
+		<p className="flow-text">I am Flow Text. To see Flow Text in action, slowly resize your browser and watch the size of this text body change! Use the button above to toggle off/on flow-text to see the difference!</p>
 		<ul>
 			<li>List item 1</li>
 			<li>List item 2</li>
@@ -42,7 +42,7 @@ export default {
 						<blockquote>
 							This is an example quotation that uses the blockquote tag.
 						</blockquote>
-						<p class="flow-text">I am Flow Text. To see Flow Text in action, slowly resize your browser and watch the size of this text body change! Use the button above to toggle off/on flow-text to see the difference!</p>
+						<p className="flow-text">I am Flow Text. To see Flow Text in action, slowly resize your browser and watch the size of this text body change! Use the button above to toggle off/on flow-text to see the difference!</p>
 						<ul>
 							<li>List item 1</li>
 							<li>List item 2</li>
@@ -62,7 +62,7 @@ export default {
 			text:
 `<Card>
 	<CardContent>
-		<h4 class="truncate">This is an extremely long title that will be truncated</h4>
+		<h4 className="truncate">This is an extremely long title that will be truncated</h4>
 		<ul className="browser-default">
 			<li>List item 1</li>
 			<li>List item 2</li>
@@ -73,7 +73,7 @@ export default {
 			component: () => {
 				return (<Card>
 					<CardContent>
-						<h4 class="truncate">This is an extremely long title that will be truncated</h4>
+						<h4 className="truncate">This is an extremely long title that will be truncated</h4>
 						<ul className="browser-default">
 							<li>List item 1</li>
 							<li>List item 2</li>

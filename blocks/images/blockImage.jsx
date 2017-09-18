@@ -8,9 +8,9 @@ export default class ImageBlock extends BaseComponent {
 			return null;
 		}
 		return (<img
-					src={this.props.image}
-					alt={this.props.description || ''}
-				/>);
+			src={this.props.image}
+			alt={this.props.description || ''}
+		/>);
 	}
 
 	render() {
