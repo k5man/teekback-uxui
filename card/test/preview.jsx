@@ -17,9 +17,17 @@ export default {
 		<h3>Header h3</h3>
 		<h4>Header h4</h4>
 		<p>
-			I'll be in your neighborhood doing errands 
-			this weekend if you want to meet up for bunch. Let me know.
+			Ill be in your neighborhood doing errands this weekend if you want to meet up for bunch. Let me know.
 		</p>
+		<p>
+			And little bit more...
+		</p>
+		<hr />
+		<p>
+			Some text for test card section.
+		</p>
+		<hr />
+			Some text for test card section. Again.
 	</CardContent>
 	<CardActions>
 		<a href="">Link 1</a>
@@ -44,6 +52,12 @@ export default {
 						<p>
 							And little bit more...
 						</p>
+						<hr />
+						<p>
+							Some text for test card section.
+						</p>
+						<hr />
+							Some text for test card section. Again.
 					</CardContent>
 					<CardActions>
 						<a href="">Link 1</a>
