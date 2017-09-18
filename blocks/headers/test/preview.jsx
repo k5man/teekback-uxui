@@ -1,5 +1,5 @@
 import { Card } from '../../../card';
-import { IconHeaderBlock } from '../index';
+import { HeaderBlock } from '../index';
 import image from './logo.png';
 
 export default {
@@ -15,7 +15,7 @@ export default {
 			component: () => {
 				return (
 					<Card>
-						<IconHeaderBlock
+						<HeaderBlock
 							title="Main title"
 							subtitle="Subtitle"
 						/>
@@ -34,7 +34,7 @@ export default {
 			component: () => {
 				return (
 					<Card>
-						<IconHeaderBlock
+						<HeaderBlock
 							image={image}
 							title="Main title"
 							subtitle="Subtitle"
@@ -54,7 +54,7 @@ export default {
 			component: () => {
 				return (
 					<Card>
-						<IconHeaderBlock
+						<HeaderBlock
 							image={image}
 							title="Main title"
 							subtitle="Subtitle"

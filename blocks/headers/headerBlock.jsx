@@ -1,7 +1,7 @@
 import BaseComponent from '../../base/component';
 import './style.less';
 
-export default class IconHeaderBlock extends BaseComponent {
+export default class HeaderBlock extends BaseComponent {
 
 	imagePart() {
 		if (!this.props.image) {
@@ -28,7 +28,7 @@ export default class IconHeaderBlock extends BaseComponent {
 
 }
 
-IconHeaderBlock.propTypes = {
+HeaderBlock.propTypes = {
 	className: PropTypes.string,
 	image: PropTypes.any,
 	title: PropTypes.string,
@@ -36,6 +36,6 @@ IconHeaderBlock.propTypes = {
 	rounded: PropTypes.bool,
 };
 
-IconHeaderBlock.defaultProps = {
+HeaderBlock.defaultProps = {
 	className: '',
 };

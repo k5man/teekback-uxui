@@ -1,4 +1,4 @@
-import IconHeaderBlock from './iconHeader';
+import HeaderBlock from './headerBlock';
 
-export default IconHeaderBlock;
-export { IconHeaderBlock };
+export default HeaderBlock;
+export { HeaderBlock };
