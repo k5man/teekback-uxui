@@ -1,7 +1,9 @@
 import BlockImage from './blockImage';
-import BlockGoodsItem from './blockGoodsItem';
-import BlockGoodsItemSelectQuantity from './blockGoodsItemSelectQuantity';
+import BlockImages from './blockImages';
+import BlockGoodsItem from './goods/blockGoodsItem';
+import BlockGoodsItemSelectQuantity from './goods/blockGoodsItemSelectQuantity';
+import TechHeaderBlock from './header/techHeaderBlock';
 
 import './style.less';
 
-export { BlockImage, BlockGoodsItem, BlockGoodsItemSelectQuantity };
+export { BlockImage, BlockImages, BlockGoodsItem, BlockGoodsItemSelectQuantity, TechHeaderBlock };

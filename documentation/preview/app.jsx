@@ -3,6 +3,8 @@ import './style.less';
 import Buttons from '../../buttons/test/preview';
 import Cards from '../../card/test/preview';
 import TitlesBlocks from '../../blocks/titles-block/test/preview';
+import HeaderBlocks from '../../blocks/header/test/preview';
+import GoodBlocks from '../../blocks/goods/test/preview';
 import Forms from '../../form/test/preview';
 import Icons from '../../icons/test/preview';
 
@@ -12,6 +14,8 @@ const previews = [
 	Icons,
 	Cards,
 	TitlesBlocks,
+	GoodBlocks,
+	HeaderBlocks,
 ];
 
 class App extends React.Component {
