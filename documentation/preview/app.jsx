@@ -27,8 +27,22 @@ class App extends React.Component {
 			<div className="inner">
 				<ul>
 					{blocks.map(item => {
+						if (!item.variants) {
+							return (
+								<li><a href={`#${App.escapeId(item.title)}`}>{`${item.title}`}</a></li>
+							);
+						}
 						return (
-							<li><a href={`#${item.title}`}>{`${item.title}`}</a></li>
+							<li>
+								<a href={`#${App.escapeId(item.title)}`}>{`${item.title}`}</a>
+								<ul className="subItems">
+									{
+										item.variants.map(subItem => {
+											return <li><a href={`#${App.escapeId(subItem.title)}`}>{`${subItem.title}`}</a></li>;
+										})
+									}
+								</ul>
+							</li>
 						);
 					})}
 				</ul>
@@ -36,9 +50,46 @@ class App extends React.Component {
 		);
 	}
 
+	static escapeId(id) {
+		return id.replace(/ /g, '_');
+	}
+
+	static prepareTemplateText(template, text, i) {
+		if (i === 0) {
+			return template.replace('**replacement**', text);
+		}
+		return `******
+${text}
+******`;
+	}
+
+	static drawTemplateBlock(subBlock) {
+		return (
+			<div id={App.escapeId(subBlock.title)} className="previewBlocks scrollspy">
+				<h4>{subBlock.title}</h4>
+				{
+					subBlock.variants.map((block, i) => (<div id={App.escapeId(block.title)} className="previewBlocks scrollspy">
+						<h5 >{block.title}</h5>
+						<div className="previewBlock">
+							<div className="previewExample">
+								{subBlock.template.component(block.component())}
+							</div>
+							<div className="previewCode">
+								<pre>
+									<code className="language-markup">{App.prepareTemplateText(subBlock.template.text, block.text, i)}</code>
+								</pre>
+							</div>
+						</div>
+					</div>)
+					)
+				}
+			</div>
+		);
+	}
+
 	static drawBlock(block) {
 		return (
-			<div id={block.title} className="previewBlocks scrollspy">
+			<div id={App.escapeId(block.title)} className="previewBlocks scrollspy">
 				<h4>{block.title}</h4>
 				<div className="previewBlock">
 					<div className="previewExample">
@@ -376,7 +427,9 @@ class App extends React.Component {
 						return (
 							<div className="previewBlocksWrap" id={item.title}>
 								<h2>{item.title}</h2>
-								{item.blocks && item.blocks.map(App.drawBlock)}
+								{item.blocks && item.blocks.map(block => {
+									return block.template ? App.drawTemplateBlock(block) : App.drawBlock(block);
+								})}
 							</div>
 						);
 					})}

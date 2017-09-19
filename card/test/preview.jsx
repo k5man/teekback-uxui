@@ -1,4 +1,5 @@
-import { Card, CardHeader, CardContent, CardActions, CardImage } from '../index';
+import { Card, CardHeader, CardContent, CardActions, CardImage, CardTitle } from '../index';
+import { Icon } from '../../icons/index';
 import image from './img.png';
 
 export default {
@@ -66,7 +67,81 @@ export default {
 				</Card>);
 			},
 		},
-
+		{
+			title: 'Card title',
+			template: {
+				text:
+`<Card>
+	<CardHeader>
+		**replacement**
+	</CardHeader>
+	<CardContent>
+		<h3>Text title</h3>
+		<p>
+			And little bit more...
+		</p>
+	</CardContent>
+	<CardActions>
+		<a href="">Link 1</a>
+	</CardActions>
+</Card>`,
+				component: (replacement) => {
+					return (<Card>
+						<CardHeader>
+							{replacement}
+						</CardHeader>
+						<CardContent>
+							<h3>Text title</h3>
+							<p>
+								And little bit more...
+							</p>
+						</CardContent>
+						<CardActions>
+							<a href="">Link 1</a>
+						</CardActions>
+					</Card>);
+				},
+			},
+			variants: [
+				{
+					title: 'Card title',
+					text: `<CardTitle title="Card title" />`,
+					component: () => {
+						return <CardTitle title="Card title" />;
+					},
+				},
+				{
+					title: 'Card title with icon',
+					text:
+`<CardTitle
+	icon={<Icon name="person_pin" />}
+	title="Card title"
+/>`,
+					component: () => {
+						return (<CardTitle
+							icon={<Icon name="person_pin" />}
+							title="Card title"
+						/>);
+					},
+				},
+				{
+					title: 'Card title with icon and sideheader',
+					text:
+`<CardTitle
+	icon={<Icon name="person_pin" />}
+	title="Card title"
+	sideTitle="Step 1 from 3"
+/>`,
+					component: () => {
+						return (<CardTitle
+							icon={<Icon name="person_pin" />}
+							title="Card title"
+							sideTitle="Step 1 from 3"
+						/>);
+					},
+				},
+			],
+		},
 	],
 };
 

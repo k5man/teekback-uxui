@@ -19,6 +19,6 @@ CardImage.propTypes = {
 	title: PropTypes.string,
 };
 
-BaseComponent.defaultProps = {
+CardImage.defaultProps = {
 	className: '',
 };
