@@ -8,7 +8,7 @@ export default {
 		{
 			title: 'Icon Header without icon',
 			text:
-				`<IconHeaderBlock
+				`<HeaderBlock
 					title="Main title"
 					subtitle="Subtitle"
 				/>`,
@@ -26,7 +26,7 @@ export default {
 		{
 			title: 'Icon Header with icon',
 			text:
-				`<IconHeaderBlock
+				`<HeaderBlock
 					image={image}
 					title="Main title"
 					subtitle="Subtitle"
@@ -46,7 +46,7 @@ export default {
 		{
 			title: 'Icon Header with Rounded Icon',
 			text:
-				`<IconHeaderBlock
+				`<HeaderBlock
 					image={image}
 					title="Main title"
 					subtitleGray="Subtitle"

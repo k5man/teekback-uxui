@@ -5,7 +5,7 @@
 	padding: @card-padding;
 	margin: @element-top-margin 0 @element-bottom-margin 0;
 	border-radius: 2px;
-	@extend .z-depth-1;
+@extend . z-depth-1;
 	background-color: @card-bg-color;
 }
 
@@ -28,15 +28,15 @@
 	.card-icon-header {
 		padding: @card-padding;
 		padding-left: 72px;
-      position: relative;
-		.card-icon	{
-         position: absolute;
-         width: 42px;
-         height: 42px;
-         overflow: hidden;
-         left: 15px;
-         display: inline-block;
-         vertical-align: middle;
+		position: relative;
+		.card-icon {
+			position: absolute;
+			width: 42px;
+			height: 42px;
+			overflow: hidden;
+			left: 15px;
+			display: inline-block;
+			vertical-align: middle;
 			border-radius: 50%;
 			background-color: #ccc;
 		}
@@ -45,15 +45,15 @@
 	.card-branded-header {
 		padding: @card-padding;
 		padding-left: 72px;
-      position: relative;
-		.card-icon	{
-         position: absolute;
-         width: 42px;
-         height: 42px;
-         overflow: hidden;
-         left: 15px;
-         display: inline-block;
-         vertical-align: middle;
+		position: relative;
+		.card-icon {
+			position: absolute;
+			width: 42px;
+			height: 42px;
+			overflow: hidden;
+			left: 15px;
+			display: inline-block;
+			vertical-align: middle;
 			background-color: #ccc;
 		}
 	}
@@ -86,7 +86,7 @@
 	.card-content {
 		padding: @card-padding;
 		border-radius: 0 0 2px 2px;
-	   min-height: 50px;
+		min-height: 50px;
 
 		.card-title {
 			display: block;
@@ -100,8 +100,8 @@
 
 		hr {
 			border: 0;
-			border-top: 1px solid rgba(160,160,160,.2);
-			height: 0px;
+			border-top: 1px solid rgba(160, 160, 160, .2);
+			height: 0;
 			background: none;
 			overflow: hidden;
 			display: block;
@@ -115,6 +115,11 @@
 				display: none;
 			}
 		}
+
+		:first-child {
+			margin-top: 0;
+			padding-top: 0;
+		}
 	}
 
 	.card-action {
@@ -123,7 +128,7 @@
 		}
 		position: relative;
 		background-color: inherit;
-		border-top: 1px solid rgba(160,160,160,.2);
+		border-top: 1px solid rgba(160, 160, 160, .2);
 		padding: @card-padding-top @card-padding;
 
 		a:not(.btn):not(.btn-large):not(.btn-floating) {
@@ -132,7 +137,9 @@
 			transition: color .3s ease;
 			text-transform: uppercase;
 
-			&:hover { color: @card-link-color-light; }
+			&:hover {
+				color: @card-link-color-light;
+			}
 		}
 	}
 
@@ -161,7 +168,6 @@
 				font-weight: bold;
 			}
 		}
-
 
 	}
 

@@ -1,7 +1,7 @@
 @import "../../assets/css/use";
 
 .title-block {
-	padding: @card-padding;
+	margin: @card-padding 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -26,3 +26,10 @@
 	flex-grow: 1;
 }
 
+.card-header .title-block:first-child {
+	margin-top: 0;
+}
+
+.card-header .title-block:last-child {
+	margin-bottom: 0;
+}
