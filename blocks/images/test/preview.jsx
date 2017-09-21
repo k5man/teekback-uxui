@@ -1,6 +1,15 @@
 import { Card, CardContent } from '../../../card';
-import { BlockImage } from '../index';
+import { BlockImage, BlockImages } from '../index';
 import image from './g-1.jpg';
+
+const images = [
+	{
+		img: image,
+	},
+	{
+		img: image,
+	},
+];
 
 export default {
 	title: 'Image Blocks',
@@ -21,6 +30,37 @@ export default {
 						<BlockImage
 							image={image}
 							description="Some image"
+						/>
+						<CardContent>
+							Some content
+						</CardContent>
+					</Card>
+				);
+			},
+		},
+		{
+			title: 'Images Block',
+			text:
+				`const images = [
+	{
+		img: image,
+	},
+	{
+		img: image,
+	},
+];
+...
+	<BlockImages
+			image={images}
+/>`,
+			component: () => {
+				return (
+					<Card>
+						<CardContent>
+							Some content
+						</CardContent>
+						<BlockImages
+							image={images}
 						/>
 						<CardContent>
 							Some content
