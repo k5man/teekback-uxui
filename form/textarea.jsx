@@ -9,8 +9,7 @@ export default class InputField extends BaseInput {
 		this.props.type = this.props.type ? this.props.type : 'text';
 		return (
 			<div className={`input-field ${this.props.className}`} >
-				<input
-					className="materialize-textarea"
+				<textarea
 					{...this.getCustomProps()}
 				/>
 				{this.props.label ? <label htmlFor={this.props.id} className="active" >{this.props.label}</label> : null}
