@@ -1,5 +1,5 @@
-import { Card } from '../../../card';
-import { ProductSmall } from '../index';
+import { Card, CardContent } from '../../../card';
+import { ProductSmall, BlockGoodsItemSelectQuantity } from '../index';
 import image from './g-3.png';
 
 export default {
@@ -21,6 +21,28 @@ export default {
 							name="Product name"
 							description="Product short description"
 						/>
+					</Card>
+				);
+			},
+		},
+		{
+			title: 'Product Select Quantity Block',
+			text:
+				`<BlockGoodsItemSelectQuantity
+	max={5}
+	current={3}
+/>`,
+			component: () => {
+				return (
+					<Card>
+						<CardContent>
+							<BlockGoodsItemSelectQuantity
+								max={5}
+								current={3}
+								selectedClass="red"
+								unselectedClass=""
+							/>
+						</CardContent>
 					</Card>
 				);
 			},
