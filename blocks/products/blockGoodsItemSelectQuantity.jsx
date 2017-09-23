@@ -19,7 +19,7 @@ export default class BlockGoodsItemSelectQuantity extends BaseComponent {
 
 	componentWillReceiveProps(nextProps) {
 		if (this.state.current !== nextProps.current) {
-			this.setState({current: this.getCurrent(nextProps)});
+			this.setState({ current: this.getCurrent(nextProps) });
 		}
 	}
 
@@ -29,7 +29,7 @@ export default class BlockGoodsItemSelectQuantity extends BaseComponent {
 
 	setValue(newValue) {
 		this.props.onChange(newValue);
-		this.setState({current: newValue});
+		this.setState({ current: newValue });
 	}
 
 	renderButtons(totalBtns, curValue, selectedClass, unselectedClass) {
