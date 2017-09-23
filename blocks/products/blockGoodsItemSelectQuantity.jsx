@@ -6,19 +6,30 @@ import '../../assets/css/materialize.less';
 /**
  * BlockGoodsItemSelectQuantity
  *
- * 0.1.0
+ * 0.2.0
  */
 export default class BlockGoodsItemSelectQuantity extends BaseComponent {
 	constructor(props) {
 		super(props);
 		this.state = {
-			current: isNaN(this.props.current) ? 0 : this.props.current,
+			current: this.getCurrent(this.props),
+			productId: this.props.productId,
 		};
 	}
 
+	componentWillReceiveProps(nextProps) {
+		if (this.state.current !== nextProps.current) {
+			this.setState({current: this.getCurrent(nextProps)});
+		}
+	}
+
+	getCurrent(props) {
+		return (isNaN(props.current) ? 0 : props.current);
+	}
+
 	setValue(newValue) {
-		this.setState({current: newValue});
 		this.props.onChange(newValue);
+		this.setState({current: newValue});
 	}
 
 	renderButtons(totalBtns, curValue, selectedClass, unselectedClass) {
@@ -58,21 +69,3 @@ BlockGoodsItemSelectQuantity.defaultProps = {
 	selectedClass: '',
 	unselectedClass: '',
 };
-
-/**
- <div className={`product-with-qs ${this.props.className}`}>
- <img src={this.props.productimage} alt={this.props.producttitle} className="product-image " />
- <span>{`${this.props.producttitle}`}</span>
- <p className="subheading-gray">
- {`${this.props.productsubtitle}`}
- </p>
- <p className="subheading-gray">
- {`${this.props.productprice}`}
- </p>
- </div>
- <div className="divider" />
- <div className={`block-base `}>
- <InputField label="Label" placeholder="Placeholder" />
- <SelectField label="Label" placeholder="Placeholder" />
- </div>
- */
