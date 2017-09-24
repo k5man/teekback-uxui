@@ -6,7 +6,7 @@ import '../../assets/css/materialize.less';
 /**
  * BlockGoodsItemSelectQuantity
  *
- * 0.2.0
+ * 0.3.0
  */
 export default class BlockGoodsItemSelectQuantity extends BaseComponent {
 	constructor(props) {
@@ -47,7 +47,7 @@ export default class BlockGoodsItemSelectQuantity extends BaseComponent {
 	render() {
 		return (
 			<div className={`block-goods ${this.props.className}`}>
-				{this.renderButtons(this.props.max, this.state.current, this.props.selectedClass, this.props.unselectedClass)}
+				{this.renderButtons(this.props.max + 1, this.state.current, this.props.selectedClass, this.props.unselectedClass)}
 			</div>
 		);
 	}
