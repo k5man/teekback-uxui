@@ -30,6 +30,7 @@ export default class BlockImages extends BaseComponent {
 					showIndicators
 					showArrows={false}
 					showThumbs={false}
+					showStatus={false}
 					onClickItem={
 						() => {
 							this.props.onClickItem();
