@@ -35,7 +35,7 @@ export default class BlockGoodsItemSelectQuantity extends BaseComponent {
 	renderButtons(totalBtns, curValue, selectedClass, unselectedClass) {
 		const r = [];
 		for (let i = 0; i < totalBtns; i++) {
-			if (i <= curValue) {
+			if (i === curValue) {
 				r.push(<RaisedButton className={selectedClass} onClick={() => (this.setValue(i))}>{i}</RaisedButton>);
 			} else {
 				r.push(<FlatButton className={unselectedClass} onClick={() => (this.setValue(i))}>{i}</FlatButton>);
