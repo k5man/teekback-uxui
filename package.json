@@ -1,6 +1,6 @@
 {
   "name": "teekback-uxui",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "UI library.",
   "main": "index.js",
   "private": true,
@@ -73,6 +73,7 @@
     "lesshat": "^4.1.0",
     "materialize": "^1.0.0",
     "materialize-css": "^0.100.2",
-    "react-input-mask": "^1.0.7"
+    "react-input-mask": "^1.0.7",
+    "react-responsive-carousel": "^3.1.26"
   }
 }

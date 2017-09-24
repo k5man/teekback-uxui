@@ -1,3 +1,5 @@
+import { Carousel } from 'react-responsive-carousel';
+// import styles from 'react-responsive-carousel/lib/styles/carousel.min.css'
 import BaseComponent from '../../base/component';
 import './style.less';
 
@@ -5,14 +7,18 @@ import './style.less';
  *
  * BlockImages
  *
- * v 0.1.0
+ * v 0.2.0
+ * using react-responsive-carousel
+ * Note: styles are included with style in index.ejs
  */
 export default class BlockImages extends BaseComponent {
 
 	renderImages() {
 		let idx = 0;
 		const r = this.props.images.map((x) => (
-			<img src={x.img} alt="" key={idx++} />
+			<div>
+				<img src={x.img} alt="" key={idx++} />
+			</div>
 		));
 		return r;
 	}
@@ -20,7 +26,18 @@ export default class BlockImages extends BaseComponent {
 	render() {
 		return (
 			<div className={`block-image ${this.props.className}`}>
-				{this.renderImages()}
+				<Carousel
+					showIndicators
+					showArrows={false}
+					showThumbs={false}
+					onClickItem={
+						() => {
+							this.props.onClickItem();
+						}
+					}
+				>
+					{this.renderImages()}
+				</Carousel>
 			</div>
 		);
 	}
@@ -28,9 +45,11 @@ export default class BlockImages extends BaseComponent {
 }
 
 BlockImages.propTypes = {
-	images: PropTypes.array.isRequired,
+	onClickItem: PropTypes.func,
+	images: PropTypes.array,
 };
 
 BlockImages.defaultProps = {
+	onClickItem: () => {},
 	images: [],
 };

@@ -60,7 +60,7 @@ export default {
 							Some content
 						</CardContent>
 						<BlockImages
-							image={images}
+							images={images}
 						/>
 						<CardContent>
 							Some content
