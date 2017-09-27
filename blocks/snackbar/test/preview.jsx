@@ -1,66 +1,20 @@
-import { Card } from '../../../card';
-import { HeaderBlock } from '../index';
-import image from './logo.png';
+import { Snackbar } from '../index';
 
 export default {
-	title: 'Header Blocks',
+	title: 'Snackbar',
 	blocks: [
 		{
-			title: 'Icon Header without icon',
+			title: 'Simple snackbar',
 			text:
-				`<HeaderBlock
-					title="Main title"
-					subtitle="Subtitle"
+				`<Snackbar
+					message="Simple message"
 				/>`,
 			component: () => {
 				return (
-					<Card>
-						<HeaderBlock
-							title="Main title"
-							subtitle="Subtitle"
-						/>
-					</Card>
-				);
-			},
-		},
-		{
-			title: 'Icon Header with icon',
-			text:
-				`<HeaderBlock
-					image={image}
-					title="Main title"
-					subtitle="Subtitle"
-				/>`,
-			component: () => {
-				return (
-					<Card>
-						<HeaderBlock
-							image={image}
-							title="Main title"
-							subtitle="Subtitle"
-						/>
-					</Card>
-				);
-			},
-		},
-		{
-			title: 'Icon Header with Rounded Icon',
-			text:
-				`<HeaderBlock
-					image={image}
-					title="Main title"
-					subtitleGray="Subtitle"
-				/>`,
-			component: () => {
-				return (
-					<Card>
-						<HeaderBlock
-							image={image}
-							title="Main title"
-							subtitle="Subtitle"
-							rounded="true"
-						/>
-					</Card>
+					<Snackbar
+						message="Simple message"
+						open
+					/>
 				);
 			},
 		},

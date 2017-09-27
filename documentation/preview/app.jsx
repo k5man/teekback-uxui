@@ -8,6 +8,7 @@ import Icons from '../../icons/test/preview';
 import HeaderBlocks from '../../blocks/headers/test/preview';
 import ProductBlocks from '../../blocks/products/test/preview';
 import ImageBlocks from '../../blocks/images/test/preview';
+import SnackbarBlocks from '../../blocks/snackbar/test/preview';
 
 const previews = [
 	Typography,
@@ -18,6 +19,7 @@ const previews = [
 	HeaderBlocks,
 	ProductBlocks,
 	ImageBlocks,
+	SnackbarBlocks,
 ];
 
 class App extends React.Component {
