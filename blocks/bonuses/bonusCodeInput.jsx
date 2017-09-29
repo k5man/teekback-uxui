@@ -1,13 +1,17 @@
 import BaseComponent from '../../base/component';
+import { RaisedButton, FlatButton } from '../../buttons';
 import './style.less';
 
 export default class BonusCodeInput extends BaseComponent {
 
 	render() {
 		return (
-			<div className={`product-block-small ${this.props.className}`}>
-				<div className="product-block__text">
-					{this.props.buttontext && <p className="title">{this.props.buttontext}</p>}
+			<div className={`bonus-block-small ${this.props.className}`}>
+				<div className="bonus-block-small-counter">
+					<h3>{this.props.counter}</h3>
+				</div>
+				<div>
+					<FlatButton>{this.props.actiontext}</FlatButton>
 				</div>
 			</div>
 		);
@@ -17,10 +21,12 @@ export default class BonusCodeInput extends BaseComponent {
 
 BonusCodeInput.propTypes = {
 	className: PropTypes.string,
-	buttonText: PropTypes.string,
+	counter: PropTypes.number,
+	actiontext: PropTypes.string,
 };
 
 BonusCodeInput.defaultProps = {
 	className: '',
-	buttonText: 'Enter the Code',
+	counter: 0,
+	actiontext: 'Enter the Code',
 };

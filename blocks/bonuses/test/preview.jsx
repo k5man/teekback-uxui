@@ -14,7 +14,8 @@ export default {
 				return (
 					<Card>
 						<BonusCodeInput
-							buttontext="Product name"
+							counter="0"
+							actiontext="Enter the Code"
 						/>
 					</Card>
 				);
