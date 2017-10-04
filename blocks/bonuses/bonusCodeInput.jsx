@@ -1,5 +1,5 @@
 import BaseComponent from '../../base/component';
-import { RaisedButton, FlatButton } from '../../buttons';
+import { FlatButton } from '../../buttons';
 import './style.less';
 
 export default class BonusCodeInput extends BaseComponent {
