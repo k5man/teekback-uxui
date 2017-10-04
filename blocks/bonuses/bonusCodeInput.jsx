@@ -21,12 +21,10 @@ export default class BonusCodeInput extends BaseComponent {
 
 BonusCodeInput.propTypes = {
 	className: PropTypes.string,
-	counter: PropTypes.number,
-	actiontext: PropTypes.string,
+	counter: PropTypes.number.isRequired,
+	actiontext: PropTypes.string.isRequired,
 };
 
 BonusCodeInput.defaultProps = {
 	className: '',
-	counter: 0,
-	actiontext: 'Enter the Code',
 };
