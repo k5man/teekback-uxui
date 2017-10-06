@@ -7,9 +7,9 @@ export default class CheckboxField extends BaseInput {
 			this.props.id = (Date.now() + Math.random()).toString(25).replace('.', '');
 		}
 		return (
-			<p className={`checkbox-field ${this.props.className}`} >
+			<p className={`radio-field ${this.props.className}`} >
 				<input
-					type="checkbox"
+					type="radio"
 					{...this.getCustomProps()}
 				/>
 				{this.props.label ? <label htmlFor={this.props.id} >{this.props.label}</label> : null}

@@ -1,4 +1,4 @@
-import { InputField, PhoneInputField, CheckboxField } from '../index';
+import { InputField, PhoneInputField, CheckboxField, RadioField } from '../index';
 
 export default {
 	title: 'Form',
@@ -15,6 +15,23 @@ export default {
 			text: `<CheckboxField label="Checkbox field" />`,
 			component: () => {
 				return (<CheckboxField label="Checkbox field" />);
+			},
+		},
+		{
+			title: 'Radio text',
+			text: `<div>
+	<RadioField name="test1" label="Radio field" />
+	<RadioField name="test1" label="Radio field" />
+	<RadioField name="test2" label="Radio field" />
+</div>`,
+			component: () => {
+				return (
+					<div>
+						<RadioField name="test1" label="Radio field" />
+						<RadioField name="test1" label="Radio field" />
+						<RadioField name="test2" label="Radio field" />
+					</div>
+				);
 			},
 		},
 		{
