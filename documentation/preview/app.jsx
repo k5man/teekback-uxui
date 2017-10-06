@@ -10,6 +10,7 @@ import ProductBlocks from '../../blocks/products/test/preview';
 import ImageBlocks from '../../blocks/images/test/preview';
 import SnackbarBlocks from '../../blocks/snackbar/test/preview';
 import BonusBlocks from '../../blocks/bonuses/test/preview';
+import Preloader from '../../blocks/preloader/test/preview';
 
 const previews = [
 	Typography,
@@ -21,6 +22,7 @@ const previews = [
 	ProductBlocks,
 	ImageBlocks,
 	SnackbarBlocks,
+	Preloader,
 	BonusBlocks,
 ];
 
