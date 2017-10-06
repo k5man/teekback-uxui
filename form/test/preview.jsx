@@ -1,4 +1,4 @@
-import { InputField, PhoneInputField } from '../index';
+import { InputField, PhoneInputField, CheckboxField } from '../index';
 
 export default {
 	title: 'Form',
@@ -8,6 +8,13 @@ export default {
 			text: `<InputField label="Text field" />`,
 			component: () => {
 				return (<InputField label="Text field" />);
+			},
+		},
+		{
+			title: 'Checkbox text',
+			text: `<CheckboxField label="Checkbox field" />`,
+			component: () => {
+				return (<CheckboxField label="Checkbox field" />);
 			},
 		},
 		{
