@@ -26,15 +26,17 @@ export default class InputField extends BaseInput {
 			this.props.id = (Date.now() + Math.random()).toString(25).replace('.', '');
 		}
 		this.props.type = this.props.type ? this.props.type : 'text';
+		const isActive = this.state.isActive || (this.textInput && !!this.textInput.value);
 		return (
 			<div className={`input-field ${this.props.className}`} >
 				<input
 					onFocus={() => this.onFocus()}
 					onBlur={() => this.onBlur()}
+					ref={(input) => { this.textInput = input; }}
 					className="materialize-textarea"
 					{...this.getCustomProps()}
 				/>
-				{this.props.label ? <label htmlFor={this.props.id} className={this.state.isActive ? 'active' : ''} >{this.props.label}</label> : null}
+				{this.props.label ? <label htmlFor={this.props.id} className={isActive ? 'active' : ''} >{this.props.label}</label> : null}
 			</div>
 		);
 	}
