@@ -1,4 +1,4 @@
-import { InputField, PhoneInputField, CheckboxField, RadioField } from '../index';
+import { InputField, PhoneInputField, CheckboxField, RadioField, MaskedInputField } from '../index';
 
 export default {
 	title: 'Form',
@@ -55,6 +55,35 @@ export default {
 					hint="Phone field"
 					className="green lighten-5"
 				/>);
+			},
+		},
+		{
+			title: 'Masked input text',
+			text: `<MaskedInputField 
+	label="Text field"
+	mask={[/\\d/, /\\d/, '/', /\\d/, /\\d/, '/', /\\d/, /\\d/, /\\d/, /\\d/]}
+/>
+<MaskedInputField 
+	label="Text field"
+	autoCorrectedDatePipe="mm/dd/yyyy"
+	mask={[/\\d/, /\\d/, '/', /\\d/, /\\d/, '/', /\\d/, /\\d/, /\\d/, /\\d/]}
+/>`,
+			component: () => {
+				return (
+					<div>
+						<MaskedInputField
+							label="Text field"
+							showMask
+							mask={[/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]}
+						/>
+						<MaskedInputField
+							label="Text field"
+							showMask
+							autoCorrectedDatePipe="mm/dd/yyyy"
+							mask={[/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]}
+						/>
+					</div>
+				);
 			},
 		},
 	],

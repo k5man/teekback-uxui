@@ -1,5 +1,6 @@
 import BaseInput from './baseInput';
 import MaskedInput from 'react-text-mask';
+import createAutoCorrectedDatePipe from 'text-mask-addons/dist/createAutoCorrectedDatePipe'
 
 export default class MaskedInputField extends BaseInput {
 
@@ -27,7 +28,10 @@ export default class MaskedInputField extends BaseInput {
 			this.props.id = (Date.now() + Math.random()).toString(25).replace('.', '');
 		}
 		this.props.type = this.props.type ? this.props.type : 'text';
-		const isActive = this.state.isActive || (this.textInput && !!this.textInput.value);
+		const isActive = this.state.isActive || (this.textInput && this.textInput.inputElement && !!this.textInput.inputElement.value);
+		if (this.props.autoCorrectedDatePipe) {
+			this.props.pipe = createAutoCorrectedDatePipe(this.props.autoCorrectedDatePipe);
+		}
 		return (
 			<div className={`input-field ${this.props.className}`} >
 				<MaskedInput
@@ -47,8 +51,10 @@ export default class MaskedInputField extends BaseInput {
 MaskedInputField.propTypes = {
 	className: PropTypes.string,
 	mask: PropTypes.string.isRequired,
+	guide: PropTypes.bool,
 };
 
 MaskedInputField.defaultProps = {
 	className: '',
+	guide: true,
 };
