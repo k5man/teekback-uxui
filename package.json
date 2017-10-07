@@ -74,6 +74,7 @@
     "materialize": "^1.0.0",
     "materialize-css": "^0.100.2",
     "react-input-mask": "^1.0.7",
-    "react-responsive-carousel": "^3.1.27"
+    "react-responsive-carousel": "^3.1.27",
+    "react-text-mask": "^5.0.2"
   }
 }

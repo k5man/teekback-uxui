@@ -1,5 +1,5 @@
 import BaseInput from './baseInput';
-import InputMask from 'react-input-mask';
+import MaskedInput from 'react-text-mask';
 
 export default class MaskedInputField extends BaseInput {
 
@@ -30,7 +30,7 @@ export default class MaskedInputField extends BaseInput {
 		const isActive = this.state.isActive || (this.textInput && !!this.textInput.value);
 		return (
 			<div className={`input-field ${this.props.className}`} >
-				<InputMask
+				<MaskedInput
 					onFocus={() => this.onFocus()}
 					onBlur={() => this.onBlur()}
 					ref={(input) => { this.textInput = input; }}
