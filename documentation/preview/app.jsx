@@ -11,6 +11,7 @@ import ImageBlocks from '../../blocks/images/test/preview';
 import SnackbarBlocks from '../../blocks/snackbar/test/preview';
 import BonusBlocks from '../../blocks/bonuses/test/preview';
 import Preloader from '../../blocks/preloader/test/preview';
+import Notifications from '../../blocks/notifications/test/preview';
 
 const previews = [
 	Typography,
@@ -24,6 +25,7 @@ const previews = [
 	SnackbarBlocks,
 	Preloader,
 	BonusBlocks,
+	Notifications,
 ];
 
 class App extends React.Component {
