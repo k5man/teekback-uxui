@@ -1,6 +1,6 @@
-import BaseInput from './baseInput';
 import MaskedInput from 'react-text-mask';
-import createAutoCorrectedDatePipe from 'text-mask-addons/dist/createAutoCorrectedDatePipe'
+import createAutoCorrectedDatePipe from 'text-mask-addons/dist/createAutoCorrectedDatePipe';
+import BaseInput from './baseInput';
 
 export default class MaskedInputField extends BaseInput {
 
