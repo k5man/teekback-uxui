@@ -1,5 +1,5 @@
 import { Card, CardContent } from '../../../card';
-import { ProductSmall, BlockGoodsItemSelectQuantity } from '../index';
+import { ProductSmall, ProductRegular, BlockGoodsItemSelectQuantity } from '../index';
 import image from './g-3.png';
 
 export default {
@@ -19,6 +19,27 @@ export default {
 						<ProductSmall
 							image={image}
 							name="Product name"
+							description="Product short description"
+						/>
+					</Card>
+				);
+			},
+		},
+		{
+			title: 'Regular Product Block',
+			text:
+				`<ProductRegular
+					image={image}
+					name="Product name"
+					description="Product short description"
+				/>`,
+			component: () => {
+				return (
+					<Card>
+						<ProductRegular
+							image={image}
+							name="Product name"
+							prise="USD 12.00"
 							description="Product short description"
 						/>
 					</Card>
