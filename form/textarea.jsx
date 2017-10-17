@@ -1,6 +1,6 @@
 import BaseInput from './baseInput';
 
-export default class InputField extends BaseInput {
+export default class TextArea extends BaseInput {
 
 	render() {
 		if (!this.props.id) {
@@ -8,7 +8,7 @@ export default class InputField extends BaseInput {
 		}
 		this.props.type = this.props.type ? this.props.type : 'text';
 		return (
-			<div className={`input-field ${this.props.className}`} >
+			<div className={` ${this.props.className}`} >
 				<textarea
 					{...this.getCustomProps()}
 				/>

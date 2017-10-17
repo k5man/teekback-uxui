@@ -1,17 +1,24 @@
-import { InputField, PhoneInputField, CheckboxField, RadioField, MaskedInputField } from '../index';
+import { InputField, PhoneInputField, CheckboxField, RadioField, MaskedInputField, TextArea } from '../index';
 
 export default {
 	title: 'Form',
 	blocks: [
 		{
-			title: 'Input text',
+			title: 'Input Text',
 			text: `<InputField label="Text field" />`,
 			component: () => {
 				return (<InputField label="Text field" />);
 			},
 		},
 		{
-			title: 'Checkbox text',
+			title: 'Input Text Area',
+			text: `<InputField label="Text field" />`,
+			component: () => {
+				return (<InputField label="Text field" />);
+			},
+		},
+		{
+			title: 'Checkbox Text',
 			text: `<CheckboxField label="Checkbox field" />`,
 			component: () => {
 				return (<CheckboxField label="Checkbox field" />);
