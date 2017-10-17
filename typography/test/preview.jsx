@@ -43,6 +43,7 @@ export default {
 							This is an example quotation that uses the blockquote tag.
 						</blockquote>
 						<p className="flow-text">I am Flow Text. To see Flow Text in action, slowly resize your browser and watch the size of this text body change! Use the button above to toggle off/on flow-text to see the difference!</p>
+						<p className="info">I am info Text. To see Flow Text in action, slowly resize your browser and watch the size of this text body change! Use the button above to toggle off/on flow-text to see the difference!</p>
 						<ul>
 							<li>List item 1</li>
 							<li>List item 2</li>
