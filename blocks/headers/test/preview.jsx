@@ -1,6 +1,8 @@
-import { Card } from '../../../card';
+import { Card, CardHeader } from '../../../card';
 import { HeaderBlock } from '../index';
+import { BlockImage } from '../../images';
 import image from './logo.png';
+import image2 from './g-1.jpg';
 
 export default {
 	title: 'Header Blocks',
@@ -15,10 +17,12 @@ export default {
 			component: () => {
 				return (
 					<Card>
-						<HeaderBlock
-							title="Main title"
-							subtitle="Subtitle"
-						/>
+						<CardHeader>
+							<HeaderBlock
+								title="Main title"
+								subtitle="Subtitle"
+							/>
+						</CardHeader>
 					</Card>
 				);
 			},
@@ -34,11 +38,13 @@ export default {
 			component: () => {
 				return (
 					<Card>
-						<HeaderBlock
-							image={image}
-							title="Main title"
-							subtitle="Subtitle"
-						/>
+						<CardHeader>
+							<HeaderBlock
+								image={image}
+								title="Main title"
+								subtitle="Subtitle"
+							/>
+						</CardHeader>
 					</Card>
 				);
 			},
@@ -54,12 +60,40 @@ export default {
 			component: () => {
 				return (
 					<Card>
-						<HeaderBlock
-							image={image}
-							title="Main title"
-							subtitle="Subtitle"
-							rounded="true"
+						<CardHeader>
+							<HeaderBlock
+								image={image}
+								title="Main title"
+								subtitle="Subtitle"
+								rounded="true"
+							/>
+						</CardHeader>
+					</Card>
+				);
+			},
+		},
+		{
+			title: 'Image Header on Top',
+			text:
+				`<HeaderBlock
+					image={image}
+					title="Main title"
+					subtitleGray="Subtitle"
+				/>`,
+			component: () => {
+				return (
+					<Card>
+						<BlockImage
+									image={image2}
+									description="Some image"
+									className='top_block'
 						/>
+						<CardHeader>
+							<HeaderBlock
+								title="Main title"
+								subtitle="Subtitle"
+							/>
+						</CardHeader>
 					</Card>
 				);
 			},
