@@ -19,7 +19,7 @@ export default {
 						<ProductSmall
 							image={image}
 							name="Product name"
-							description="Product short description"
+							price="USD 12.00"
 						/>
 					</Card>
 				);
@@ -39,7 +39,7 @@ export default {
 						<ProductRegular
 							image={image}
 							name="Product name"
-							prise="USD 12.00"
+							price="USD 12.00"
 							description="Product short description"
 						/>
 					</Card>

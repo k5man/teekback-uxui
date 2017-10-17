@@ -24,7 +24,7 @@ export default class ProductRegularBlock extends BaseComponent {
 				{this.imagePart()}
 				<CardContent>
 					{this.props.name && <p className="title">{this.props.name}</p>}
-					{this.props.prise && <p className="subheading-gray">{this.props.prise}</p>}
+					{this.props.price && <p className="subheading-gray">{this.props.price}</p>}
 					{this.props.description && <p>{this.props.description}</p>}
 				</CardContent>
 			</div>
