@@ -76,20 +76,21 @@ ${text}
 			<div id={App.escapeId(subBlock.title)} className="previewBlocks scrollspy">
 				<h4>{subBlock.title}</h4>
 				{
-					subBlock.variants.map((block, i) => (<div id={App.escapeId(block.title)} className="previewBlocks scrollspy">
-						<h5 >{block.title}</h5>
-						<div className="previewBlock">
-							<div className="previewExample">
-								{subBlock.template.component(block.component())}
-							</div>
-							<div className="previewCode">
-								<pre>
-									<code className="language-markup">{App.prepareTemplateText(subBlock.template.text, block.text, i)}</code>
-								</pre>
+					subBlock.variants.map((block, i) => (
+						<div id={App.escapeId(block.title)} className="previewBlocks scrollspy">
+							<h5 >{block.title}</h5>
+							<div className="previewBlock">
+								<div className="previewExample">
+									{subBlock.template.component(block.component())}
+								</div>
+								<div className="previewCode">
+									<pre>
+										<code className="language-markup">{App.prepareTemplateText(subBlock.template.text, block.text, i)}</code>
+									</pre>
+								</div>
 							</div>
 						</div>
-					</div>)
-					)
+					))
 				}
 			</div>
 		);

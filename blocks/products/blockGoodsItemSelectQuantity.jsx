@@ -24,7 +24,7 @@ export default class BlockGoodsItemSelectQuantity extends BaseComponent {
 	}
 
 	getCurrent(props) {
-		return (isNaN(props.current) ? 0 : props.current);
+		return (Number.isNaN(props.current) ? 0 : props.current);
 	}
 
 	setValue(newValue) {

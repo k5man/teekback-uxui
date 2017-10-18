@@ -22,7 +22,9 @@ const config = {
 		path: buildDir,
 	},
 	resolve: {
-		extensions: ['.less'],
+		extensions: ['.css', '.less'],
+		enforceExtension: true,
+		enforceModuleExtension: true,
 	},
 	target: 'web',
 	module: {

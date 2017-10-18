@@ -18,7 +18,7 @@ class PhoneInputField extends BaseInput {
 	constructor(props) {
 		super(props);
 
-		let phone = this.props.phone;
+		let { phone } = this.props;
 		if (phone === undefined) phone = '';
 		phone = this.normalize(phone);
 

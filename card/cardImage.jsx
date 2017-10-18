@@ -6,7 +6,7 @@ export default class CardImage extends BaseComponent {
 		return (
 			<div className={`card-image ${this.props.className}`}>
 				<img src={this.props.src} alt={this.props.title} />
-				{this.props.title && <span className={'card-title'} >{this.props.title}</span>}
+				{this.props.title && <span className="card-title" >{this.props.title}</span>}
 			</div>
 		);
 	}

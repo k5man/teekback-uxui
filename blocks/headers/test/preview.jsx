@@ -84,9 +84,9 @@ export default {
 				return (
 					<Card>
 						<BlockImage
-									image={image2}
-									description="Some image"
-									className='top_block'
+							image={image2}
+							description="Some image"
+							className="top_block"
 						/>
 						<CardHeader>
 							<HeaderBlock

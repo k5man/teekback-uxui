@@ -16,7 +16,7 @@ export default class Button extends BaseComponent {
 	}
 
 	render() {
-		const props = this.props;
+		const { props } = this;
 		props.className = this.createClassName(props);
 		return React.createElement(
 			props.element,

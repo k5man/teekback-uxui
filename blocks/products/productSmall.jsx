@@ -9,7 +9,7 @@ export default class ProductSmallBlock extends BaseComponent {
 		}
 		return (<img
 			src={this.props.image}
-			className={`product-block__image `}
+			className="product-block__image"
 			alt={this.props.name || this.props.description || ''}
 		/>);
 	}

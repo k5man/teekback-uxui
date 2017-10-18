@@ -12,7 +12,7 @@ export default class ProductRegularBlock extends BaseComponent {
 		return (
 			<BlockImage
 				image={this.props.image}
-				className={'product-block__image'}
+				className="product-block__image"
 				description={this.props.name || this.props.description || ''}
 			/>
 		);

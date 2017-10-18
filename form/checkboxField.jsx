@@ -12,7 +12,7 @@ export default class CheckboxField extends BaseInput {
 					type="checkbox"
 					{...this.getCustomProps()}
 				/>
-				{this.props.label ? <label htmlFor={this.props.id} >{this.props.label}</label> : null}
+				{this.props.label ? <label htmlFor={this.props.id}>{this.props.label}</label> : null}
 			</p>
 		);
 	}

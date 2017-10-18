@@ -12,9 +12,9 @@ export default {
 		},
 		{
 			title: 'Input Text Area',
-			text: `<InputField label="Text field" />`,
+			text: `<TextArea label="Text field" />`,
 			component: () => {
-				return (<InputField label="Text field" />);
+				return (<TextArea label="Text field" />);
 			},
 		},
 		{

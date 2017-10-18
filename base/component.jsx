@@ -29,4 +29,4 @@ BaseComponent.propTypes = {
 BaseComponent.defaultProps = {
 	className: '',
 };
-/*eslint-enable */
+/* eslint-enable */
