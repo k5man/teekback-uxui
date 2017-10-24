@@ -12,6 +12,7 @@ import SnackbarBlocks from '../../blocks/snackbar/test/preview';
 import BonusBlocks from '../../blocks/bonuses/test/preview';
 import Preloader from '../../blocks/preloader/test/preview';
 import Notifications from '../../blocks/notifications/test/preview';
+import Collection from '../../collection/test/preview';
 
 const previews = [
 	Typography,
@@ -19,6 +20,7 @@ const previews = [
 	Forms,
 	Icons,
 	Cards,
+	Collection,
 	HeaderBlocks,
 	ProductBlocks,
 	ImageBlocks,

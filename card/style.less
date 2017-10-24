@@ -5,7 +5,7 @@
 	padding: @card-padding;
 	margin: @element-top-margin 0 @element-bottom-margin 0;
 	border-radius: 2px;
-@extend . z-depth-1;
+	@extend .z-depth-1;
 	background-color: @card-bg-color;
 }
 
@@ -116,7 +116,14 @@
 			}
 		}
 
-		:first-child {
+		& > :first-child {
+			margin-top: 0;
+			padding-top: 0;
+		}
+
+		h1:first-child, h2:first-child, h3:first-child,
+		h4:first-child, h5:first-child, h6:first-child,
+		p:first-child, ul:first-child {
 			margin-top: 0;
 			padding-top: 0;
 		}
