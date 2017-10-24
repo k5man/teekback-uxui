@@ -6,7 +6,7 @@ export default class AvatarItem extends BaseComponent {
 	render() {
 		return (
 			<li className={`collection-item avatar ${this.props.className}`}>
-				<img src={this.props.image} alt="" className="circle" />
+				{this.props.image}
 				{ this.props.title && <span className="title">{this.props.title}</span> }
 				{ this.props.description && <p>{this.props.description}</p> }
 				<span className="secondary-content">{this.props.secondaryContent}</span>
