@@ -33,7 +33,6 @@ export default class InputField extends BaseInput {
 					onFocus={() => this.onFocus()}
 					onBlur={() => this.onBlur()}
 					ref={(input) => { this.textInput = input; }}
-					className="materialize-textarea"
 					{...this.getCustomProps()}
 				/>
 				{this.props.label ? <label htmlFor={this.props.id} className={isActive ? 'active' : ''} >{this.props.label}</label> : null}
