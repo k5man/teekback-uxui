@@ -1,5 +1,5 @@
 import BaseComponent from '../../base/component';
-import { FlatButton } from '../../buttons';
+import { RaisedButton } from '../../buttons';
 import './style.less';
 
 export default class BonusCodeInput extends BaseComponent {
@@ -11,7 +11,7 @@ export default class BonusCodeInput extends BaseComponent {
 					<h3>{this.props.counter}</h3>
 				</div>
 				<div>
-					<FlatButton>{this.props.actiontext}</FlatButton>
+					<RaisedButton>{this.props.actiontext}</RaisedButton>
 				</div>
 			</div>
 		);
