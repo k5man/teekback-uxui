@@ -37,6 +37,9 @@ const config = {
 								'es2017',
 								'stage-0',
 							],
+							plugins: [
+								"transform-class-properties",
+							]
 						},
 					},
 					{

@@ -13,9 +13,7 @@ const extractLess = new ExtractTextPlugin({
 });
 
 const config = {
-	entry: {
-		main: path.resolve(root, 'assets', 'css', 'materialize.less'),
-	},
+	entry: './assets/css/materialize.less',
 	context: root,
 	output: {
 		filename: '[name].css',

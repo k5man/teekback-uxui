@@ -1,8 +1,16 @@
-import MaskedInput from 'react-text-mask';
-import createAutoCorrectedDatePipe from 'text-mask-addons/dist/createAutoCorrectedDatePipe';
+import MaskedInput, { conformToMask } from 'react-text-mask';
+import { emailMask, createNumberMask, createAutoCorrectedDatePipe } from 'text-mask-addons/src/index';
 import BaseInput from './baseInput';
 
 export default class MaskedInputField extends BaseInput {
+
+	static conformToMask = conformToMask;
+
+	static textMaskAddons = {
+		emailMask,
+		createNumberMask,
+		createAutoCorrectedDatePipe,
+	};
 
 	constructor(props) {
 		super(props);
@@ -19,7 +27,7 @@ export default class MaskedInputField extends BaseInput {
 
 	onBlur() {
 		this.setState({
-			isActive: false,
+			isActive: !!this.props.placeholder,
 		});
 	}
 
@@ -52,9 +60,19 @@ MaskedInputField.propTypes = {
 	className: PropTypes.string,
 	mask: PropTypes.string.isRequired,
 	guide: PropTypes.bool,
+	placeholder: PropTypes.string,
+	placeholderChar: PropTypes.string,
+	keepCharPositions: PropTypes.bool,
+	pipe: PropTypes.func,
+	showMask: PropTypes.bool,
 };
 
 MaskedInputField.defaultProps = {
 	className: '',
 	guide: true,
+	placeholder: undefined,
+	placeholderChar: '_',
+	keepCharPositions: false,
+	pipe: null,
+	showMask: false,
 };
