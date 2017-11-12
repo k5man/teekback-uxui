@@ -13,7 +13,7 @@ const config = {
 		filename: '[name].[hash].js',
 	},
 	resolve: {
-		extensions: ['.js', '.jsx'],
+		extensions: ['.js', '.jsx', '.json', '.less', '.css'],
 		alias: {
 			// React: 'react',
 			'react': 'inferno-compat',
@@ -52,7 +52,7 @@ const config = {
 				],
 			},
 			{
-				test: /\.less$/,
+				test: /\.less|\.css$/,
 				use: extractLess.extract({
 					use: [
 						{

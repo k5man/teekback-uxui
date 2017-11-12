@@ -44,17 +44,13 @@ export default {
 		{
 			title: 'Input phone',
 			text: `<PhoneInputField
-	mask={['+', '7', ' ', '(', /[1-9]/, /\\d/, /\\d/, ')', ' ', /\\d/, /\\d/, /\\d/, '-', /\\d/, /\\d/, '-', /\\d/, /\\d/]}
-	placeholder="+7 (903) 555-55-55"
 	label="Телефон"
-	keepCharPositions={false}
+	indicateInvalid={false}
 />`,
 			component: () => {
 				return (<PhoneInputField
-					mask={['+', '7', ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/]}
-					placeholder="+7 (903) 555-55-55"
 					label="Телефон"
-					keepCharPositions={false}
+					indicateInvalid={false}
 				/>);
 			},
 		},
@@ -62,12 +58,11 @@ export default {
 			title: 'Masked input text',
 			text: `<MaskedInputField 
 	label="Text field"
-	showMask
 	mask={[/\\d/, /\\d/, '/', /\\d/, /\\d/, '/', /\\d/, /\\d/, /\\d/, /\\d/]}
 />
 <MaskedInputField 
 	label="Text field"
-	showMask
+	showMask={false}
 	autoCorrectedDatePipe="mm/dd/yyyy"
 	mask={[/\\d/, /\\d/, '/', /\\d/, /\\d/, '/', /\\d/, /\\d/, /\\d/, /\\d/]}
 />`,
@@ -81,7 +76,7 @@ export default {
 						/>
 						<MaskedInputField
 							label="Text field"
-							showMask
+							showMask={false}
 							autoCorrectedDatePipe="mm/dd/yyyy"
 							mask={[/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]}
 						/>
