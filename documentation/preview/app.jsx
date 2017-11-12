@@ -13,6 +13,7 @@ import BonusBlocks from '../../blocks/bonuses/test/preview';
 import Preloader from '../../blocks/preloader/test/preview';
 import Notifications from '../../blocks/notifications/test/preview';
 import Collection from '../../collection/test/preview';
+import Tabs from '../../blocks/tabs/test/preview';
 
 const previews = [
 	Typography,
@@ -28,6 +29,7 @@ const previews = [
 	Preloader,
 	BonusBlocks,
 	Notifications,
+	Tabs,
 ];
 
 class App extends React.Component {
