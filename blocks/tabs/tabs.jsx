@@ -6,7 +6,7 @@ export default class Tabs extends BaseComponent {
 	render() {
 		return (
 			<div className="row tabs-wrapper">
-				<div class="col s12">
+				<div className="col s12">
 					<ul className={`tabs ${this.props.className}`}>
 						{this.props.children}
 					</ul>

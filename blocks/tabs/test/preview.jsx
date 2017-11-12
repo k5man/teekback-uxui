@@ -21,8 +21,8 @@ export default {
 					<div>
 						<Card>
 							<Tabs>
-								<Tab className="col s6" title="Tab 1"></Tab>
-								<Tab className="col s6" title="Tab 2" active></Tab>
+								<Tab className="col s6" title="Tab 1" />
+								<Tab className="col s6" title="Tab 2" active />
 							</Tabs>
 							<CardHeader>
 								<h1>test</h1>
