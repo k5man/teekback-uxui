@@ -10,7 +10,7 @@ export default {
 				`<Card>
 					<Tabs>
 						<Tab className="col s6" title="Tab 1"></Tab>
-						<Tab className="col s6" title="Tab 2"></Tab>
+						<Tab className="col s6" title="Tab 2" active></Tab>
 					</Tabs>
 					<CardHeader>
 						<h1>test</h1>
@@ -22,7 +22,7 @@ export default {
 						<Card>
 							<Tabs>
 								<Tab className="col s6" title="Tab 1"></Tab>
-								<Tab className="col s6" title="Tab 2"></Tab>
+								<Tab className="col s6" title="Tab 2" active></Tab>
 							</Tabs>
 							<CardHeader>
 								<h1>test</h1>

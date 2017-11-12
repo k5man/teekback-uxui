@@ -6,7 +6,7 @@ export default class Tab extends BaseComponent {
 	render() {
 		return (
 			<li className={`tab ${this.props.className}`}>
-				<a href="#/" {...this.getCustomProps()}>{this.props.title}</a>
+				<a href="#/" {...this.getCustomProps()} className={this.props.active ? 'active' : ''}>{this.props.title}</a>
 			</li>
 		);
 	}
@@ -15,9 +15,11 @@ export default class Tab extends BaseComponent {
 
 Tab.propTypes = {
 	className: PropTypes.string,
+	active: PropTypes.bool,
 	title: PropTypes.string.isRequired,
 };
 
 Tab.defaultProps = {
 	className: '',
+	active: false,
 };
