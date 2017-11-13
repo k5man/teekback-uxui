@@ -62,7 +62,7 @@ export default {
 								Some text for test card section. Again.
 						</CardContent>
 						<CardActions>
-							<a href="#/">Link 1</a>
+							<a className="btn" href="#/">Link 1</a>
 							<a href="#/">Link 2</a>
 						</CardActions>
 					</Card>
