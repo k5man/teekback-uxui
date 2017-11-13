@@ -36,7 +36,7 @@ export default class MaskedInputField extends BaseInput {
 			this.props.id = (Date.now() + Math.random()).toString(25).replace('.', '');
 		}
 		this.props.type = this.props.type ? this.props.type : 'text';
-		const isActive = this.state.isActive || (this.textInput && this.textInput.inputElement && !!this.textInput.inputElement.value);
+		const isActive = this.state.isActive || (this.textInput && this.textInput.inputElement && !!this.textInput.inputElement.value) || this.props.value;
 		if (this.props.autoCorrectedDatePipe) {
 			this.props.pipe = createAutoCorrectedDatePipe(this.props.autoCorrectedDatePipe);
 		}
