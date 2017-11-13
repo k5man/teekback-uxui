@@ -1,4 +1,5 @@
 import { Card, CardHeader } from '../../../card';
+import { Icon } from '../../../icons';
 import { Tabs, Tab } from '../index';
 
 export default {
@@ -21,7 +22,7 @@ export default {
 					<div>
 						<Card>
 							<Tabs>
-								<Tab className="col s6" title="Tab 1" />
+								<Tab className="col s6" title="Tab 1" icon={<Icon name="person_pin" />} />
 								<Tab className="col s6" title="Tab 2" active />
 							</Tabs>
 							<CardHeader>

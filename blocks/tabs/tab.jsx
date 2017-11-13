@@ -6,7 +6,10 @@ export default class Tab extends BaseComponent {
 	render() {
 		return (
 			<li className={`tab ${this.props.className}`}>
-				<a href="#/" {...this.getCustomProps()} className={this.props.active ? 'active' : ''}>{this.props.title}</a>
+				<a href="#/" {...this.getCustomProps()} className={this.props.active ? 'active' : ''}>
+					{this.props.icon}
+					{this.props.title}
+				</a>
 			</li>
 		);
 	}
