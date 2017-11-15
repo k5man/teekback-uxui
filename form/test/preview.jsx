@@ -78,6 +78,7 @@ export default {
 							label="Text field"
 							showMask={false}
 							autoCorrectedDatePipe="mm/dd/yyyy"
+							value="11/11/1111"
 							mask={[/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]}
 						/>
 					</div>
