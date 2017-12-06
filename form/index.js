@@ -5,5 +5,6 @@ import CheckboxField from './checkboxField';
 import RadioField from './radioField';
 import TextArea from './textarea';
 import MaskedInputField from './maskedInputField';
+import PhoneInputField from './phoneInputField';
 
-export { BaseInput, InputField, SelectField, TextArea, CheckboxField, RadioField, MaskedInputField };
+export { BaseInput, InputField, SelectField, TextArea, CheckboxField, RadioField, MaskedInputField, PhoneInputField };
