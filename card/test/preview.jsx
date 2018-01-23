@@ -1,5 +1,6 @@
 import { Card, CardHeader, CardContent, CardActions, CardImage, CardTitle } from '../index';
 import { Icon } from '../../icons/index';
+import { RaisedButton, FlatButton } from '../../buttons/index';
 import image from './img.png';
 
 export default {
@@ -31,8 +32,8 @@ export default {
 			Some text for test card section. Again.
 	</CardContent>
 	<CardActions>
-		<a href="">Link 1</a>
-		<a href="">Link 2</a>
+		<RaisedButton>Link 1</RaisedButton>
+		<FlatButton>Link 2</FlatButton>
 	</CardActions>
 </Card>`,
 			component: () => {
@@ -62,8 +63,8 @@ export default {
 								Some text for test card section. Again.
 						</CardContent>
 						<CardActions>
-							<a className="btn" href="#/">Link 1</a>
-							<a href="#/">Link 2</a>
+							<RaisedButton>Link 1</RaisedButton>
+							<FlatButton>Link 2</FlatButton>
 						</CardActions>
 					</Card>
 				);
