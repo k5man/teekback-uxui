@@ -44,13 +44,22 @@ export default {
 		{
 			title: 'Input phone',
 			text: `<PhoneInputField
-	label="Телефон"
-	indicateInvalid={false}
+	phone=""
+	minLength={10}
+	maxLength={10}
+	mask="+7(999)9999999"
+	pfx="+7"
+	hint="Phone field"
+	className="green lighten-5"
 />`,
 			component: () => {
 				return (<PhoneInputField
-					label="Телефон"
-					indicateInvalid={false}
+					phone=""
+					minLength={10}
+					maxLength={10}
+					mask="+1(999)9999999"
+					pfx="+1"
+					hint="Phone field"
 				/>);
 			},
 		},
@@ -87,4 +96,21 @@ export default {
 		},
 	],
 };
+
+/*
+		{
+			title: 'Input phone',
+			text: `<PhoneInputField
+	label="Телефон"
+	indicateInvalid={false}
+/>`,
+			component: () => {
+				return (<PhoneInputField
+					label="Телефон"
+					indicateInvalid={false}
+				/>);
+			},
+		},
+*/
+
 

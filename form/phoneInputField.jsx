@@ -1,56 +1,106 @@
-import Phone from 'react-phone-number-input';
-import 'react-phone-number-input/rrui.css';
-import 'react-phone-number-input/style.css';
+import InputMask from 'react-input-mask';
+import { InputField } from './index';
 import BaseInput from './baseInput';
-import './phone-input.less';
 
+const isValidPhone = (phone, minLength, pfx) => phone.length === (minLength + pfx.length);
+
+/**
+ * Input field for phones
+ *
+ * version 2.0.0
+ * ported to uxui lib
+ * version 1.0.1
+ * + mask is now prop
+ * + hint is not required by default
+ * using new-ui ux/ui
+ */
 class PhoneInputField extends BaseInput {
-
 	constructor(props) {
 		super(props);
+
+		let { phone } = this.props;
+		if (phone === undefined) phone = '';
+		phone = this.normalize(phone);
+
 		this.state = {
-			phone: props.value || '',
+			phone,
+			isValid: isValidPhone(phone, this.props.minLength, this.props.pfx),
 		};
+
+		this.handleChange = this.handleChange.bind(this);
 	}
 
-	getCustomProps() {
-		const props = super.getCustomProps();
-		return Object.keys(props).reduce((result, propName) => {
-			const excludedNames = ['onChange'];
-			if (excludedNames.indexOf(propName) < 0) {
-				result[propName] = props[propName];
+	normalize(phone) {
+		let p = phone || '';
+
+		if (this.props.pfx && this.props.pfx !== '') {
+			if (p.startsWith(this.props.pfx)) {
+				p = p.substr(this.props.pfx.length, p.length);
 			}
-			return result;
-		}, {});
+		}
+
+		p = p.replace(/\D/g, '');
+
+		if (this.props.maxLength && p.length >= this.props.maxLength) {
+			p = p.substr(0, this.props.maxLength);
+		}
+
+		p = this.props.pfx + p;
+
+		return p;
 	}
 
-	onChange(phone) {
-		this.setState({ phone });
+	handleChange(v, inputPhone) {
+		const phone = this.normalize(inputPhone);
+
+		const isValid = isValidPhone(phone, this.props.minLength, this.props.pfx);
+
+		this.setState({ phone, isValid });
+
+		this.props.onChange(this, phone, isValid);
 	}
 
 	render() {
-		if (!this.props.id) {
-			this.props.id = (Date.now() + Math.random()).toString(25).replace('.', '');
-		}
 		return (
-			<div className={`input-field ${this.props.className}`} >
-				<Phone
-					onChange={phone => this.onChange(phone)}
+			<InputField
+				value={this.state.phone}
+				errorText={this.state.errorText}
+				floatingLabelText={this.props.hint}
+				onChange={(v) => {
+					this.handleChange(v, v.target.value);
+				}}
+				className={this.props.className}
+				style={{ fontSize: 16 }}
+			>
+				<InputMask
+					mask={this.props.mask}
 					value={this.state.phone}
-					{...this.getCustomProps()}
+					maskChar={null}
 				/>
-				{this.props.label ? <label htmlFor={this.props.id} className="active">{this.props.label}</label> : null}
-			</div>
+			</InputField>
 		);
 	}
+
 }
 
 PhoneInputField.propTypes = {
+	hint: PropTypes.string,
+	pfx: PropTypes.string,
+	minLength: PropTypes.number,
+	maxLength: PropTypes.number,
+	phone: PropTypes.string,
+	mask: PropTypes.string,
+	onChange: PropTypes.func.isRequired,
 	className: PropTypes.string,
 };
-
 PhoneInputField.defaultProps = {
+	phone: '',
+	minLength: 10,
+	maxLength: undefined,
+	mask: '+7(999)9999999',
+	pfx: '+7',
+	hint: '',
 	className: '',
 };
-
+//
 export default PhoneInputField;
