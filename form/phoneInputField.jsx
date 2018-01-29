@@ -75,7 +75,7 @@ class PhoneInputField extends BaseInput {
 				<InputMask
 					mask={this.props.mask}
 					value={this.state.phone}
-					maskChar={null}
+					maskChar="_"
 				/>
 			</InputField>
 		);
