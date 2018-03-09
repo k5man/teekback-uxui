@@ -1,5 +1,6 @@
 import '../../assets/css/materialize.less';
 import './style.less';
+import Blocks from '../../blocks/test/preview';
 import Typography from '../../typography/test/preview';
 import Buttons from '../../buttons/test/preview';
 import Cards from '../../card/test/preview';
@@ -9,13 +10,13 @@ import HeaderBlocks from '../../blocks/headers/test/preview';
 import ProductBlocks from '../../blocks/products/test/preview';
 import ImageBlocks from '../../blocks/images/test/preview';
 import SnackbarBlocks from '../../blocks/snackbar/test/preview';
-import BonusBlocks from '../../blocks/bonuses/test/preview';
 import Preloader from '../../blocks/preloader/test/preview';
 import Notifications from '../../blocks/notifications/test/preview';
 import Collection from '../../collection/test/preview';
 import Tabs from '../../blocks/tabs/test/preview';
 
 const previews = [
+	Blocks,
 	Typography,
 	Buttons,
 	Forms,
@@ -27,7 +28,6 @@ const previews = [
 	ImageBlocks,
 	SnackbarBlocks,
 	Preloader,
-	BonusBlocks,
 	Notifications,
 	Tabs,
 ];
@@ -150,6 +150,16 @@ ${text}
 					</li>
 				</ul>
 				<main className="previewContent">
+					{previews.map(item => {
+						return (
+							<div className="previewBlocksWrap" id={item.title}>
+								<h2>{item.title}</h2>
+								{item.blocks && item.blocks.map(block => {
+									return block.template ? App.drawTemplateBlock(block) : App.drawBlock(block);
+								})}
+							</div>
+						);
+					})}
 					<div className="previewBlocksWrap" id="colorsBlock">
 						<h2>Colors</h2>
 						<div className="row dynamic-color">
@@ -435,17 +445,7 @@ ${text}
 								<div className="grey darken-4" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>#212121 grey darken-4</div>
 							</div>
 						</div>
-					</div>
-					{previews.map(item => {
-						return (
-							<div className="previewBlocksWrap" id={item.title}>
-								<h2>{item.title}</h2>
-								{item.blocks && item.blocks.map(block => {
-									return block.template ? App.drawTemplateBlock(block) : App.drawBlock(block);
-								})}
-							</div>
-						);
-					})}
+					</div>					
 				</main>
 			</div>
 		);
