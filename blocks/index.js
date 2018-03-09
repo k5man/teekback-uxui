@@ -1,6 +1,6 @@
 import BlockTwoColumns from './base-blocks';
 import BonusCodeInput from './bonuses';
-//import HeaderBlock from './headers/headerBlock';
+import HeaderBlock from './headers/headerBlock';
 
 export default null;
-export { BlockTwoColumns, BonusCodeInput };
+export { BlockTwoColumns, BonusCodeInput, HeaderBlock };
