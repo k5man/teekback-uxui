@@ -66,6 +66,7 @@ class PhoneInputField extends BaseInput {
 				value={this.state.phone}
 				errorText={this.state.errorText}
 				floatingLabelText={this.props.hint}
+				label={this.props.label}
 				onChange={(v) => {
 					this.handleChange(v, v.target.value);
 				}}
@@ -97,9 +98,10 @@ PhoneInputField.defaultProps = {
 	phone: '',
 	minLength: 10,
 	maxLength: undefined,
-	mask: '+7(999)9999999',
-	pfx: '+7',
+	mask: '',
+	pfx: '',
 	hint: '',
+	label: 'Phone number',
 	className: '',
 };
 //
