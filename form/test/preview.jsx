@@ -60,7 +60,8 @@ export default {
 					mask="+1(999)9999999"
 					pfx="+1"
 					hint="Phone field"
-				/>);
+				/>
+				);
 			},
 		},
 		{

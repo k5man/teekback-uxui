@@ -19,8 +19,7 @@ export default class ProductSmallBlock extends BaseComponent {
 			<div className={`product-block-small ${this.props.className}`}>
 				{this.imagePart()}
 				<div className="product-block__text">
-					{this.props.name && <p className="subheading">{this.props.name}</p>}
-					{this.props.price && <p className="subheading-gray">{this.props.price}</p>}
+					{this.props.children}
 				</div>
 			</div>
 		);

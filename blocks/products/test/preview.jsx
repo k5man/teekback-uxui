@@ -18,9 +18,10 @@ export default {
 					<Card>
 						<ProductSmall
 							image={image}
-							name="Product name"
-							price="USD 12.00"
-						/>
+						>
+							<p className="subheading">Product name</p>
+							<p className="subheading-gray">USD 12.00</p>
+						</ProductSmall>
 					</Card>
 				);
 			},
