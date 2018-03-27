@@ -8,11 +8,17 @@ export default {
 		{
 			title: 'Minimal Product Block',
 			text:
-				`<ProductSmall
-					image={image}
-					name="Product name"
-					description="Product short description"
-				/>`,
+
+				`import { ProductSmall } from 'teekback-uxui/blocks/products';
+...
+<Card>
+	<ProductSmall
+		image={image}
+	>
+		<p className="subheading">Product name</p>
+		<p className="subheading-gray">USD 12.00</p>
+	</ProductSmall>
+</Card>`,
 			component: () => {
 				return (
 					<Card>
