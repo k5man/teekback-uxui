@@ -4,8 +4,12 @@ export default class InputField extends BaseInput {
 
 	constructor(props) {
 		super(props);
+		let initState = false;
+		if (this.props.value) {
+			initState = true;
+		}
 		this.state = {
-			isActive: false,
+			isActive: initState,
 		};
 	}
 
