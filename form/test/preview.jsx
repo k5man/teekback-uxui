@@ -1,4 +1,4 @@
-import { InputField, PhoneInputField, CheckboxField, RadioField, MaskedInputField, TextArea } from '../index';
+import { InputField, PhoneInputField, CheckboxField, RadioField, MaskedInputField, TextArea, RangeField } from '../index';
 
 export default {
 	title: 'Form',
@@ -39,6 +39,13 @@ export default {
 						<RadioField name="test2" label="Radio field" />
 					</div>
 				);
+			},
+		},
+		{
+			title: 'Range Field',
+			text: `<RangeField label="Select Number" />`,
+			component: () => {
+				return (<RangeField label="Select Number" />);
 			},
 		},
 		{
